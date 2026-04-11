@@ -11,506 +11,372 @@
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <div style="display:flex;align-items:center;gap:0.75rem;">
-        <img src="assets/karthik.jpeg" alt="G Karthik" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);" />
-        <span class="nav-logo">GK<span class="gold">.</span></span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact" class="nav-cta">Contact Me</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+<nav id="navbar">
+  <div class="nav-inner">
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <img src="assets/karthik.jpeg" alt="G Karthik" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--navy);" />
+      <span class="nav-logo">GK<span style="color:var(--navy-mid);">.</span></span>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-content">
+    <p class="hero-label">Business Analyst · Hyderabad</p>
+    <h1 class="hero-title">G <span>Karthik</span></h1>
+    <p class="hero-sub">🤝 Bridging the gap between business teams &amp; development teams — translating business needs into technological solutions. 💡</p>
+    <div class="hero-metrics">
+      <div class="metric"><span class="metric-num">5.5+</span><span class="metric-label">Years Experience</span></div>
+      <div class="metric-divider"></div>
+      <div class="metric"><span class="metric-num">3+</span><span class="metric-label">Full-Cycle Projects</span></div>
+      <div class="metric-divider"></div>
+      <div class="metric"><span class="metric-num">40%</span><span class="metric-label">Manual Effort Reduced</span></div>
+      <div class="metric-divider"></div>
+      <div class="metric"><span class="metric-num">0</span><span class="metric-label">Critical Defects at Go-Live</span></div>
     </div>
-  </nav>
+    <a href="#projects" class="hero-btn">View My Work <span>↓</span></a>
+  </div>
+  <div class="hero-scroll-hint">scroll</div>
+</section>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-content">
-      <p class="hero-label">Business Analyst · Hyderabad</p>
-      <h1 class="hero-title">G <span class="gold">Karthik</span></h1>
-      <p class="hero-sub">🤝 Bridging the gap between business teams &amp; development teams — translating business needs into technological solutions. 💡</p>
-      <div class="hero-metrics">
-        <div class="metric"><span class="metric-num">5.5<span class="gold">+</span></span><span class="metric-label">Years Experience</span></div>
-        <div class="metric-divider"></div>
-        <div class="metric"><span class="metric-num">3<span class="gold">+</span></span><span class="metric-label">Full-Cycle Projects</span></div>
-        <div class="metric-divider"></div>
-        <div class="metric"><span class="metric-num">40<span class="gold">%</span></span><span class="metric-label">Manual Effort Reduced</span></div>
-        <div class="metric-divider"></div>
-        <div class="metric"><span class="metric-num">0</span><span class="metric-label">Critical Defects at Go-Live</span></div>
-      </div>
-      <a href="#projects" class="hero-btn">View My Work <span>↓</span></a>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <p class="section-label">Case Studies</p>
+    <h2 class="section-title">Work That <span style="color:var(--navy-mid);">Speaks</span></h2>
+    <p class="section-sub">Three professional projects. Two personal ones. All built with rigour.</p>
+    <div class="personal-banner">
+      <span class="pb-tag">Personal Projects</span>
+      <span class="pb-note">Built on personal interest — demonstrating initiative beyond the job description.</span>
     </div>
-    <div class="hero-scroll-hint">scroll</div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-inner">
-      <p class="section-label">Case Studies</p>
-      <h2 class="section-title">Work That <span class="gold">Speaks</span></h2>
-      <p class="section-sub">Three professional projects. Two personal ones. All built with rigour.</p>
-
-      <!-- Personal Projects Banner -->
-      <div class="personal-banner">
-        <span class="pb-tag">Personal Projects</span>
-        <span class="pb-note">Built on personal interest — demonstrating initiative beyond the job description.</span>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="card-tag">Personal · SDLC End-to-End</div>
+        <div class="card-icon">📄</div>
+        <h3>GKZipPDF</h3>
+        <p class="card-desc">A production-deployed web app that solves a real operational pain — extracting PDFs from ZIP files generated by e-commerce platforms. Owned every phase of SDLC from scratch.</p>
+        <div class="card-chips">
+          <span>Requirements Gathering</span><span>MoSCoW Prioritisation</span>
+          <span>UAT</span><span>Deployment</span><span>Stakeholder Mgmt</span>
+        </div>
+        <div class="card-actions">
+          <button class="btn-outline" onclick="openZipModal()">Explore SDLC Journey</button>
+          <a href="https://www.gkzipdf.com" target="_blank" class="btn-gold">Live Product ↗</a>
+        </div>
       </div>
 
-      <div class="projects-grid">
-
-        <!-- Project: GKZipPDF -->
-        <div class="project-card featured" id="card-zip">
-          <div class="card-tag">Personal · SDLC End-to-End</div>
-          <div class="card-icon">📄</div>
-          <h3>GKZipPDF</h3>
-          <p class="card-desc">A production-deployed web app that solves a real operational pain — extracting PDFs from ZIP files generated by e-commerce platforms. Owned every phase of SDLC from scratch.</p>
-          <div class="card-chips">
-            <span>Requirements Gathering</span>
-            <span>MoSCoW Prioritisation</span>
-            <span>UAT</span>
-            <span>Deployment</span>
-            <span>Stakeholder Mgmt</span>
-          </div>
-          <div class="card-actions">
-            <button class="btn-outline" onclick="openZipModal()">Explore SDLC Journey</button>
-            <a href="https://www.gkzipdf.com" target="_blank" class="btn-gold">Live Product ↗</a>
-          </div>
+      <div class="project-card">
+        <div class="card-tag">Personal · Feature Proposal</div>
+        <div class="card-icon">🛒</div>
+        <h3>Swiggy Insta-Bundles</h3>
+        <p class="card-desc">A complete product feature proposal for Swiggy Instamart — from user story to BRD, FRD, and PRD. Identified a real friction point for power users and documented a production-ready solution.</p>
+        <div class="card-chips">
+          <span>User Story</span><span>BRD</span><span>FRD</span><span>PRD</span><span>UX Thinking</span>
         </div>
-
-        <!-- Project: Swiggy Insta-Bundles -->
-        <div class="project-card featured" id="card-swiggy">
-          <div class="card-tag">Personal · Feature Proposal</div>
-          <div class="card-icon">🛒</div>
-          <h3>Swiggy Insta-Bundles</h3>
-          <p class="card-desc">A complete product feature proposal for Swiggy Instamart — from user story to BRD, FRD, and PRD. Identified a real friction point for power users and documented a production-ready solution.</p>
-          <div class="card-chips">
-            <span>User Story</span>
-            <span>BRD</span>
-            <span>FRD</span>
-            <span>PRD</span>
-            <span>UX Thinking</span>
-          </div>
-          <div class="card-actions">
-            <button class="btn-gold" onclick="openSwiggyModal()">View Full Proposal</button>
-          </div>
+        <div class="card-actions">
+          <button class="btn-gold" onclick="openSwiggyModal()">View Full Proposal</button>
         </div>
+      </div>
 
-        <!-- Professional Projects -->
-        <div class="personal-banner" style="margin-top:2.5rem;">
-          <span class="pb-tag" style="background:var(--navy-mid); color:var(--gold);">Professional Experience</span>
-          <span class="pb-note">Delivered at V Cosmetic Crafters Pvt. Ltd. across 5.5 years.</span>
+      <div class="personal-banner" style="grid-column:span 2;margin-top:2.5rem;">
+        <span class="pb-tag">Professional Experience</span>
+        <span class="pb-note">Delivered at <strong style="color:var(--text-main);">Esthetic Insights Pvt. Ltd.</strong> (Dec 2020–Sept 2024) &amp; <strong style="color:var(--text-main);">V Cosmetic Crafters Pvt. Ltd.</strong> (Oct 2024–Present) · 5.5 Years Total</span>
+      </div>
+
+      <div class="project-card pro">
+        <div class="card-tag">Professional · V Cosmetic Crafters · Analytics</div>
+        <div class="card-icon">📊</div>
+        <h3>Sales Forecaster</h3>
+        <p class="card-desc">Web-based analytics platform consolidating raw data from 5+ e-commerce channels. Generates Conservative, Base, and Optimistic forecast scenarios — eliminating manual Excel-based analysis entirely.</p>
+        <div class="card-chips">
+          <span>8+ Stakeholder Interviews</span><span>Process Flow Diagrams</span>
+          <span>UAT · 10+ Users</span><span>SOPs</span>
         </div>
+        <div class="pro-impact"><span>↓ ~50% Clarification Cycles</span><span>3 Forecast Scenarios</span></div>
+      </div>
 
-        <div class="project-card pro">
-          <div class="card-tag">Professional · V Cosmetic Crafters · Analytics Platform</div>
-          <div class="card-icon">📊</div>
-          <h3>Sales Forecaster</h3>
-          <p class="card-desc">Web-based analytics platform consolidating raw data from 5+ e-commerce channels. Generates Conservative, Base, and Optimistic forecast scenarios — eliminating manual Excel-based analysis entirely.</p>
-          <div class="card-chips">
-            <span>8+ Stakeholder Interviews</span>
-            <span>Process Flow Diagrams</span>
-            <span>UAT · 10+ Users</span>
-            <span>SOPs</span>
-          </div>
-          <div class="pro-impact">
-            <span>↓ ~50% Clarification Cycles</span>
-            <span>3 Forecast Scenarios</span>
-          </div>
+      <div class="project-card pro">
+        <div class="card-tag">Professional · Esthetic Insights · Internal Web App</div>
+        <div class="card-icon">⚙️</div>
+        <h3>COsMos Platform</h3>
+        <p class="card-desc">Full-scale internal operations platform adopted by 4 departments. Replaced 100% of manual Google Sheets tracking with real-time operational visibility.</p>
+        <div class="card-chips">
+          <span>12+ Elicitation Sessions</span><span>3 BRDs · 3 FRDs</span>
+          <span>8+ Workflow Maps</span><span>20+ Daily Users</span>
         </div>
+        <div class="pro-impact"><span>↓ ~35% Planning Delays</span><span>↓ ~60% Req. Ambiguity</span></div>
+      </div>
 
-        <div class="project-card pro">
-          <div class="card-tag">Professional · Esthetic Insights · Internal Web App</div>
-          <div class="card-icon">⚙️</div>
-          <h3>COsMos Platform</h3>
-          <p class="card-desc">Full-scale internal operations platform adopted by 4 departments — Marketing, Packaging, Procurement, and Production. Replaced 100% of manual Google Sheets tracking with real-time operational visibility.</p>
-          <div class="card-chips">
-            <span>12+ Elicitation Sessions</span>
-            <span>3 BRDs · 3 FRDs</span>
-            <span>8+ Workflow Maps</span>
-            <span>20+ Daily Users</span>
-          </div>
-          <div class="pro-impact">
-            <span>↓ ~35% Planning Delays</span>
-            <span>↓ ~60% Req. Ambiguity</span>
-          </div>
+      <div class="project-card pro" style="grid-column:span 2;">
+        <div class="card-tag">Professional · Esthetic Insights · ERP Implementation</div>
+        <div class="card-icon">🏭</div>
+        <h3>Zoho Inventory ERP</h3>
+        <p class="card-desc">End-to-end ERP rollout across 2 warehouses — onboarded 30+ vendors, automated purchase &amp; sales order workflows, and implemented RBAC eliminating 100% of unauthorized order edits.</p>
+        <div class="card-chips">
+          <span>RBAC Implementation</span><span>30+ Vendor Onboarding</span>
+          <span>Change Management</span><span>UAT Coordination</span>
         </div>
-
-        <div class="project-card pro">
-          <div class="card-tag">Professional · Esthetic Insights · ERP Implementation</div>
-          <div class="card-icon">🏭</div>
-          <h3>Zoho Inventory ERP</h3>
-          <p class="card-desc">End-to-end ERP rollout across 2 warehouses — onboarded 30+ vendors and clients, automated purchase & sales order workflows, and implemented RBAC eliminating 100% of unauthorized order edits.</p>
-          <div class="card-chips">
-            <span>RBAC Implementation</span>
-            <span>30+ Vendor Onboarding</span>
-            <span>Change Management</span>
-            <span>UAT Coordination</span>
-          </div>
-          <div class="pro-impact">
-            <span>↓ ~40% Manual Entry</span>
-            <span>0 Unauthorized Edits</span>
-          </div>
-        </div>
-
+        <div class="pro-impact"><span>↓ ~40% Manual Entry</span><span>0 Unauthorized Edits</span></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-inner about-inner">
-      <div class="about-text">
-        <p class="section-label">The Story</p>
-        <h2 class="section-title">About <span class="gold">Me</span></h2>
-        <p>I'm a <strong>Results-driven Business Analyst</strong> with 5.5 years of experience in end-to-end requirements engineering, ERP implementation, and data-driven product development — primarily within the Cosmetics & Beauty domain.</p>
-        <p>I've delivered <strong>3 major cross-functional projects</strong> from requirements gathering all the way through UAT and go-live. I speak the language of both business and technology, translating complex stakeholder needs into structured BRDs, FRDs, and SOPs that development teams can actually build from.</p>
-        <p>Beyond the job description, I build things. <strong>GKZipPDF</strong> is a live production app I ideated, documented, tested, and deployed myself. The <strong>Swiggy Insta-Bundles proposal</strong> is my way of thinking like a Product Manager — spotting user friction, defining it rigorously, and proposing a measurable solution.</p>
-        <p>I believe a great BA doesn't just document requirements — they <em>drive outcomes</em>.</p>
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner about-inner">
+    <div class="about-text">
+      <p class="section-label">The Story</p>
+      <h2 class="section-title">About <span style="color:var(--navy-mid);">Me</span></h2>
+      <p>I'm a <strong>Results-driven Business Analyst</strong> with 5.5 years of experience in end-to-end requirements engineering, ERP implementation, and data-driven product development — primarily within the Cosmetics &amp; Beauty domain.</p>
+      <p>I've delivered <strong>3 major cross-functional projects</strong> from requirements gathering all the way through UAT and go-live. I speak the language of both business and technology, translating complex stakeholder needs into structured BRDs, FRDs, and SOPs that development teams can actually build from.</p>
+      <p>Beyond the job description, I build things. <strong>GKZipPDF</strong> is a live production app I ideated, documented, tested, and deployed myself. The <strong>Swiggy Insta-Bundles proposal</strong> shows I think like a Product Manager — spotting user friction and proposing measurable solutions.</p>
+      <p>I believe a great BA doesn't just document requirements — they <em>drive outcomes</em>.</p>
+    </div>
+    <div class="about-sidebar">
+      <div class="about-card"><p class="ac-label">Domain</p><p class="ac-value">Cosmetics &amp; Beauty · Supply Chain · E-Commerce</p></div>
+      <div class="about-card"><p class="ac-label">Methodology</p><p class="ac-value">Agile (Scrum) · Waterfall · SDLC</p></div>
+      <div class="about-card"><p class="ac-label">Signature Skill</p><p class="ac-value">Zero critical defects at go-live — across all 3 deployments</p></div>
+      <div class="about-card gold-card"><p class="ac-label">Currently</p><p class="ac-value">Open to exciting BA opportunities 🟢</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <p class="section-label">Competencies</p>
+    <h2 class="section-title">Core <span style="color:var(--navy-mid);">Skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Requirements Engineering</h4>
+        <div class="skill-pills"><span>BRD</span><span>FRD</span><span>PRD</span><span>User Stories</span><span>Acceptance Criteria</span><span>RTM</span><span>SOPs</span><span>Process Flow Diagrams</span><span>Product Backlog</span></div>
       </div>
-      <div class="about-sidebar">
-        <div class="about-card">
-          <p class="ac-label">Domain</p>
-          <p class="ac-value">Cosmetics & Beauty · Supply Chain · E-Commerce</p>
-        </div>
-        <div class="about-card">
-          <p class="ac-label">Methodology</p>
-          <p class="ac-value">Agile (Scrum) · Waterfall · SDLC</p>
-        </div>
-        <div class="about-card">
-          <p class="ac-label">Signature Skill</p>
-          <p class="ac-value">Zero critical defects at go-live — across all 3 deployments</p>
-        </div>
-        <div class="about-card gold-card">
-          <p class="ac-label">Currently</p>
-          <p class="ac-value">Open to exciting BA opportunities 🟢</p>
-        </div>
+      <div class="skill-group">
+        <h4>Elicitation Techniques</h4>
+        <div class="skill-pills"><span>Stakeholder Interviews</span><span>Workshops</span><span>Observation</span><span>Document Analysis</span><span>Gap Analysis</span><span>Feasibility Analysis</span><span>MoSCoW Prioritisation</span></div>
+      </div>
+      <div class="skill-group">
+        <h4>Methodologies</h4>
+        <div class="skill-pills"><span>Agile (Scrum)</span><span>Waterfall</span><span>SDLC</span><span>Impact Analysis</span><span>Change Management</span><span>UAT Coordination</span></div>
+      </div>
+      <div class="skill-group">
+        <h4>Tools &amp; Platforms</h4>
+        <div class="skill-pills"><span>Jira</span><span>Confluence</span><span>Zoho Inventory (ERP)</span><span>MS Excel</span><span>Power BI</span><span>MS Visio</span><span>Lucidchart / Draw.io</span><span>Figma</span><span>SQL (Basic)</span></div>
+      </div>
+      <div class="skill-group">
+        <h4>Domain Expertise</h4>
+        <div class="skill-pills"><span>Supply Chain</span><span>Procurement</span><span>Inventory Management</span><span>Sales Forecasting</span><span>E-Commerce</span><span>Order Management</span><span>Production Planning</span></div>
+      </div>
+      <div class="skill-group">
+        <h4>Soft Skills</h4>
+        <div class="skill-pills"><span>Stakeholder Management</span><span>Cross-functional Collaboration</span><span>Data-Driven Decision Making</span><span>Presentation &amp; Reporting</span><span>Scrum Ceremonies</span></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="section-inner">
-      <p class="section-label">Competencies</p>
-      <h2 class="section-title">Core <span class="gold">Skills</span></h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h4>Requirements Engineering</h4>
-          <div class="skill-pills">
-            <span>BRD</span><span>FRD</span><span>PRD</span><span>User Stories</span>
-            <span>Acceptance Criteria</span><span>RTM</span><span>SOPs</span>
-            <span>Process Flow Diagrams</span><span>Product Backlog</span>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <p class="section-label">Career</p>
+    <h2 class="section-title">Work <span style="color:var(--navy-mid);">Experience</span></h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-header">
+            <div><h3>Business Analyst</h3><p class="tl-company">V Cosmetic Crafters Pvt. Ltd.</p></div>
+            <span class="tl-date">Oct 2024 – Present</span>
           </div>
-        </div>
-        <div class="skill-group">
-          <h4>Elicitation Techniques</h4>
-          <div class="skill-pills">
-            <span>Stakeholder Interviews</span><span>Workshops</span>
-            <span>Observation</span><span>Document Analysis</span>
-            <span>Gap Analysis</span><span>Feasibility Analysis</span>
-            <span>MoSCoW Prioritisation</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Methodologies</h4>
-          <div class="skill-pills">
-            <span>Agile (Scrum)</span><span>Waterfall</span>
-            <span>SDLC</span><span>Impact Analysis</span>
-            <span>Change Management</span><span>UAT Coordination</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Tools & Platforms</h4>
-          <div class="skill-pills">
-            <span>Jira</span><span>Confluence</span><span>Zoho Inventory (ERP)</span>
-            <span>MS Excel</span><span>Power BI</span><span>MS Visio</span>
-            <span>Lucidchart / Draw.io</span><span>Figma</span><span>SQL (Basic)</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Domain Expertise</h4>
-          <div class="skill-pills">
-            <span>Supply Chain</span><span>Procurement</span>
-            <span>Inventory Management</span><span>Sales Forecasting</span>
-            <span>E-Commerce</span><span>Order Management</span>
-            <span>Production Planning</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Soft Skills</h4>
-          <div class="skill-pills">
-            <span>Stakeholder Management</span><span>Cross-functional Collaboration</span>
-            <span>Data-Driven Decision Making</span><span>Presentation & Reporting</span>
-            <span>Scrum Ceremonies</span>
-          </div>
+          <p class="tl-industry">Cosmetics &amp; Beauty · Sales Analytics · Hyderabad</p>
+          <p class="tl-project-label">Project: Sales Forecaster — Data-Driven Sales Analytics &amp; Inventory Planning Tool</p>
+          <ul class="tl-list">
+            <li>Conducted <strong>8+ stakeholder interviews</strong> to gather requirements for a centralised forecasting platform</li>
+            <li>Identified <strong>5+ critical pain points</strong> in manual Excel-based forecasting; documented functional requirements</li>
+            <li>Collaborated with IT to translate requirements, reducing clarification cycles by <strong>~50%</strong></li>
+            <li>Designed <strong>3 end-to-end process flow diagrams</strong> covering data collection, cleansing, and forecasting</li>
+            <li>Conducted <strong>UAT</strong> with 10+ users; authored user guides and <strong>2 SOPs</strong></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="section-inner">
-      <p class="section-label">Career</p>
-      <h2 class="section-title">Work <span class="gold">Experience</span></h2>
-      <div class="timeline">
-
-        <!-- Company 1: V Cosmetic Crafters -->
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-header">
-              <div>
-                <h3>Business Analyst</h3>
-                <p class="tl-company">V Cosmetic Crafters Pvt. Ltd.</p>
-              </div>
-              <span class="tl-date">Oct 2024 – Present</span>
-            </div>
-            <p class="tl-industry">Cosmetics & Beauty · Sales Analytics · Hyderabad</p>
-            <p class="tl-project-label">Project: Sales Forecaster — Data-Driven Sales Analytics & Inventory Planning Tool</p>
-            <ul class="tl-list">
-              <li>Conducted <strong>8+ stakeholder interviews</strong> with sales and procurement teams to gather and prioritise requirements for a centralised forecasting platform</li>
-              <li>Identified <strong>5+ critical pain points</strong> in manual Excel-based forecasting; documented functional requirements for data ingestion and multi-scenario generation</li>
-              <li>Collaborated with IT to translate requirements into technical specifications, reducing back-and-forth clarification cycles by <strong>~50%</strong></li>
-              <li>Designed <strong>3 end-to-end process flow diagrams</strong> covering data collection, cleansing, and forecasting workflows</li>
-              <li>Conducted <strong>UAT</strong> with 10+ users; authored user guides and <strong>2 SOPs</strong> for consistent platform adoption</li>
-            </ul>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-header">
+            <div><h3>Business Analyst</h3><p class="tl-company">Esthetic Insights Pvt. Ltd.</p></div>
+            <span class="tl-date">Dec 2020 – Sept 2024 · 3.8 Yrs</span>
           </div>
-        </div>
-
-        <!-- Company 2: Esthetic Insights -->
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-header">
-              <div>
-                <h3>Business Analyst</h3>
-                <p class="tl-company">Esthetic Insights Pvt. Ltd.</p>
-              </div>
-              <span class="tl-date">Dec 2020 – Sept 2024 · 3.8 Yrs</span>
-            </div>
-            <p class="tl-industry">Cosmetics & Beauty · Supply Chain, ERP & E-Commerce · Hyderabad</p>
-            <p class="tl-project-label">Projects: COsMos (Internal Web App) · Zoho Inventory ERP Implementation</p>
-            <ul class="tl-list">
-              <li>Led <strong>12+ requirement elicitation sessions</strong> (interviews, workshops, observation) across 4 departments — mapping 8+ end-to-end operational workflows for COsMos</li>
-              <li>Authored <strong>3 BRDs and 3 FRDs</strong> translating cross-functional inputs into development-ready specifications; reduced requirement ambiguity by <strong>~60%</strong></li>
-              <li>Delivered COsMos platform adopted by <strong>20+ daily users</strong>, replacing 100% of manual Google Sheets tracking and cutting production planning delays by <strong>~35%</strong></li>
-              <li>Led end-to-end <strong>Zoho Inventory ERP rollout</strong> across 2 warehouses; onboarded 30+ vendors and clients, automating purchase & sales order workflows — cutting manual data entry by <strong>~40%</strong></li>
-              <li>Implemented <strong>RBAC requirements</strong> in Zoho ERP, eliminating 100% of unauthorized order edits across procurement and accounts</li>
-              <li>Coordinated <strong>UAT cycles</strong> with 15+ cross-functional stakeholders — zero critical defects at go-live across all deployments</li>
-              <li>Facilitated <strong>20+ stakeholder workshops</strong> across Marketing, Packaging, Production, Procurement, and Accounts</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="section-inner contact-inner">
-      <p class="section-label">Let's Talk</p>
-      <h2 class="section-title">Get In <span class="gold">Touch</span></h2>
-      <p class="contact-sub">Open to BA roles, product collaborations, or just a conversation. Reach out — I respond fast.</p>
-      <div class="contact-cards">
-        <a href="https://www.linkedin.com/in/karthikgokaraju" target="_blank" class="contact-card">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </div>
-          <span class="cc-label">LinkedIn</span>
-          <span class="cc-val">karthikgokaraju</span>
-        </a>
-        <a href="https://wa.me/917730049089" target="_blank" class="contact-card">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </div>
-          <span class="cc-label">WhatsApp / Call</span>
-          <span class="cc-val">+91 7730049089</span>
-        </a>
-        <a href="/cdn-cgi/l/email-protection#86ede7f4f2eeefede1e9ede7f4e7ecf3a8e1bfb4b1c6e1ebe7efeaa8e5e9eb" class="contact-card">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <span class="cc-label">Email</span>
-          <span class="cc-val"><span class="__cf_email__" data-cfemail="aec5cfdcdac6c7c5c9c1c5cfdccfc4db80c9979c99eec9c3cfc7c280cdc1c3">[email&#160;protected]</span></span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 G Karthik · Business Analyst · Built with intent, not templates.</p>
-  </footer>
-
-  <!-- ===================== GKZIPPDF MODAL ===================== -->
-  <div class="modal-overlay" id="zipModal" onclick="closeZipModal(event)">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeZipModal()">✕</button>
-      <div class="modal-header">
-        <span class="modal-tag">Personal Project · SDLC</span>
-        <h2>GKZipPDF <span class="gold">— SDLC Journey</span></h2>
-        <p>A live production app. Every phase owned, every decision documented. This is what a BA looks like when they build.</p>
-        <a href="https://www.gkzipdf.com" target="_blank" class="btn-gold" style="display:inline-block;margin-top:0.75rem;">Visit Live Product ↗</a>
-      </div>
-      <div class="sdlc-phases">
-        <div class="phase">
-          <div class="phase-num gold">01</div>
-          <div class="phase-body">
-            <h4>Problem Statement</h4>
-            <p>Identified a real operational friction — extracting PDFs buried inside ZIP files downloaded from e-commerce platforms like Nykaa, Myntra. No tool existed that handled this cleanly. The business case was clear.</p>
-          </div>
-        </div>
-        <div class="phase">
-          <div class="phase-num gold">02</div>
-          <div class="phase-body">
-            <h4>Requirements Gathering & Analysis</h4>
-            <p>Used <strong>Interview</strong> and <strong>Workshop</strong> techniques with 2-3 internal stakeholders. Applied <strong>MoSCoW prioritisation</strong> to define scope:</p>
-            <ul>
-              <li><strong>Must Have:</strong> ZIP → PDF extraction, Compress PDF</li>
-              <li><strong>Should Have:</strong> Merge PDF</li>
-              <li><strong>Could Have:</strong> PDF ↔ Word conversion</li>
-              <li><strong>Won't Have (Phase 1):</strong> Image to PDF</li>
-            </ul>
-          </div>
-        </div>
-        <div class="phase">
-          <div class="phase-num gold">03</div>
-          <div class="phase-body">
-            <h4>Design</h4>
-            <p>Chose a simple, functional layout. Described system architecture and technology stack (Python Flask) to translate into a working UI preview. Prioritised usability over aesthetics.</p>
-          </div>
-        </div>
-        <div class="phase">
-          <div class="phase-num gold">04</div>
-          <div class="phase-body">
-            <h4>Development</h4>
-            <p>Vibe-coded using LLMs, applying BA thinking to prompt engineering and requirement translation. The spec I wrote became the blueprint for every component.</p>
-          </div>
-        </div>
-        <div class="phase">
-          <div class="phase-num gold">05</div>
-          <div class="phase-body">
-            <h4>Testing</h4>
-            <ul>
-              <li><strong>Unit Testing:</strong> Each component tested independently</li>
-              <li><strong>System Testing:</strong> Bulk upload of up to 100 ZIP files simultaneously</li>
-              <li><strong>UAT:</strong> Team members and friends used the product and gave real feedback</li>
-            </ul>
-          </div>
-        </div>
-        <div class="phase">
-          <div class="phase-num gold">06</div>
-          <div class="phase-body">
-            <h4>Deployment</h4>
-            <p>Deployed code to <strong>GitHub</strong> for version control and feature updates. Chose <strong>Vercel</strong> for hosting (free tier). Purchased domain on <strong>Namecheap</strong> and connected via DNS configuration — mapping domain to IP, ensuring accessibility and security.</p>
-          </div>
-        </div>
-        <div class="phase">
-          <div class="phase-num gold">07</div>
-          <div class="phase-body">
-            <h4>Stakeholder Management</h4>
-            <p>A stakeholder requested an <em>Image-to-PDF</em> feature mid-project. Assessed impact, managed expectations, and proposed a <strong>phased approach</strong> — core system now, feature in Phase 2. Classic BA move.</p>
-          </div>
+          <p class="tl-industry">Cosmetics &amp; Beauty · Supply Chain, ERP &amp; E-Commerce · Hyderabad</p>
+          <p class="tl-project-label">Projects: COsMos (Internal Web App) · Zoho Inventory ERP Implementation</p>
+          <ul class="tl-list">
+            <li>Led <strong>12+ requirement elicitation sessions</strong> across 4 departments — mapping 8+ operational workflows</li>
+            <li>Authored <strong>3 BRDs and 3 FRDs</strong>; reduced requirement ambiguity by <strong>~60%</strong></li>
+            <li>Delivered COsMos adopted by <strong>20+ daily users</strong>, cutting production planning delays by <strong>~35%</strong></li>
+            <li>Led <strong>Zoho ERP rollout</strong> across 2 warehouses; onboarded 30+ vendors, cutting manual entry by <strong>~40%</strong></li>
+            <li>Implemented <strong>RBAC requirements</strong> — eliminated 100% of unauthorized order edits</li>
+            <li>Coordinated UAT with 15+ stakeholders — <strong>zero critical defects</strong> at go-live</li>
+            <li>Facilitated <strong>20+ stakeholder workshops</strong> across Marketing, Packaging, Production, Procurement &amp; Accounts</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ===================== SWIGGY MODAL ===================== -->
-  <div class="modal-overlay" id="swiggyModal" onclick="closeSwiggyModal(event)">
-    <div class="modal-box modal-box--wide">
-      <button class="modal-close" onclick="closeSwiggyModal()">✕</button>
-      <div class="modal-header">
-        <span class="modal-tag">Feature Proposal · Swiggy Instamart</span>
-        <h2>Insta-Bundles <span class="gold">— Full Proposal</span></h2>
-        <p style="font-size:1.1rem;font-weight:600;color:var(--cream);margin-bottom:0.75rem;padding:0.9rem 1.2rem;background:var(--gold-pale);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;">
-          🚀 Swiggy gave me <strong>10-minute delivery</strong> — I want to give Swiggy a <strong>10-second checkout</strong>. ⚡🛒
-        </p>
-        <p class="user-story-callout">
-          <strong>User Story:</strong> As a fitness-focused "Gym Freak," I want to save my weekly staples as a single "Gym Bundle" — so I don't manually select 15+ favourites every three days.
-        </p>
-      </div>
-      <!-- Tabs -->
-      <div class="tab-bar">
-        <button class="tab-btn active" onclick="switchTab('overview')">Overview</button>
-        <button class="tab-btn" onclick="switchTab('brd')">BRD</button>
-        <button class="tab-btn" onclick="switchTab('frd')">FRD</button>
-        <button class="tab-btn" onclick="switchTab('prd')">PRD</button>
-        <button class="tab-btn" onclick="switchTab('video')">Demo Video</button>
-      </div>
-      <!-- Tab Contents -->
-      <div class="tab-content active" id="tab-overview">
-        <div class="overview-grid">
-          <div class="ov-card">
-            <h4>🎯 The Problem</h4>
-            <p>High-frequency Instamart users (gym freaks, weekly planners) spend 180–300 seconds manually searching and adding 10+ recurring items every 3 days. High bounce rates during the search-and-add phase.</p>
-          </div>
-          <div class="ov-card">
-            <h4>💡 The Solution</h4>
-            <p>Replace the unused "Print" icon in the bottom nav with a "Bundles" entry point. Users can save a cart snapshot, name it, and repopulate it in one tap — reducing Time to Checkout by 85–90%.</p>
-          </div>
-          <div class="ov-card">
-            <h4>📈 Business Impact</h4>
-            <p>Projected 15% increase in monthly order volume per power user. Higher Customer Lifetime Value and reduced cart abandonment during the search-and-add phase.</p>
-          </div>
-          <div class="ov-card">
-            <h4>🔧 Key Features</h4>
-            <ul>
-              <li>One-tap bundle population (&lt;500ms)</li>
-              <li>Real-time stock validation</li>
-              <li>Partial success notification if item OOS</li>
-              <li>Max 5 bundles per user profile</li>
-              <li>Cart append, not overwrite</li>
-            </ul>
-          </div>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner contact-inner">
+    <p class="section-label">Let's Talk</p>
+    <h2 class="section-title">Get In <span style="color:#fff;">Touch</span></h2>
+    <p class="contact-sub">Open to BA roles, product collaborations, or just a conversation. Reach out — I respond fast.</p>
+    <div class="contact-cards">
+      <a href="https://www.linkedin.com/in/karthikgokaraju" target="_blank" class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
         </div>
-        <div class="swiggy-img-wrap">
-          <img src="assets/swiggy_pic.jpeg" alt="Swiggy Instamart Bundles UI" class="swiggy-img" />
-          <p class="img-caption">Swiggy Instamart UI — "Bundles" entry point visible in the bottom navigation bar.</p>
+        <span class="cc-label">LinkedIn</span>
+        <span class="cc-val">karthikgokaraju</span>
+      </a>
+      <a href="https://wa.me/917730049089" target="_blank" class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </div>
-      </div>
-      <div class="tab-content" id="tab-brd">
-        <iframe src="assets/BRD_Swiggy.pdf" class="doc-frame" title="Business Requirements Document"></iframe>
-      </div>
-      <div class="tab-content" id="tab-frd">
-        <iframe src="assets/FRD_Swiggy.pdf" class="doc-frame" title="Functional Requirements Document"></iframe>
-      </div>
-      <div class="tab-content" id="tab-prd">
-        <iframe src="assets/PRD_Swiggy.pdf" class="doc-frame" title="Product Requirements Document"></iframe>
-      </div>
-      <div class="tab-content" id="tab-video">
-        <video controls class="doc-frame" style="background:#000;">
-          <source src="assets/swiggy_video.mp4" type="video/mp4" />
-         Your browser does not support the video tag.
-        </video>
-      </div>
+        <span class="cc-label">WhatsApp / Call</span>
+        <span class="cc-val">+91 7730049089</span>
+      </a>
+      <a href="mailto:karthikgokaraju.g927@gmail.com" class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <span class="cc-label">Email</span>
+        <span class="cc-val">karthikgokaraju.g927@gmail.com</span>
+      </a>
     </div>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 G Karthik · Business Analyst · Built with intent, not templates.</p>
-  </footer>
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 G Karthik · Business Analyst · Built with intent, not templates.</p>
+</footer>
 
-  <script src="script.js"></script>
+<!-- GKZIPPDF MODAL -->
+<div class="modal-overlay" id="zipModal" onclick="closeZipModal(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeZipModal()">✕</button>
+    <div class="modal-header">
+      <span class="modal-tag">Personal Project · SDLC</span>
+      <h2>GKZipPDF <span style="color:var(--navy-mid);">— SDLC Journey</span></h2>
+      <p>A live production app. Every phase owned, every decision documented. This is what a BA looks like when they build.</p>
+      <a href="https://www.gkzipdf.com" target="_blank" class="btn-gold" style="display:inline-block;margin-top:0.75rem;">Visit Live Product ↗</a>
+    </div>
+    <div class="sdlc-phases">
+      <div class="phase"><div class="phase-num">01</div><div class="phase-body"><h4>Problem Statement</h4><p>Identified a real operational friction — extracting PDFs from ZIP files from e-commerce platforms like Nykaa, Myntra. No clean tool existed. The business case was clear.</p></div></div>
+      <div class="phase"><div class="phase-num">02</div><div class="phase-body"><h4>Requirements Gathering &amp; Analysis</h4><p>Used <strong>Interview</strong> and <strong>Workshop</strong> techniques with 2–3 stakeholders. Applied <strong>MoSCoW prioritisation</strong>: ZIP→PDF &amp; Compress (Must Have), Merge PDF (Should Have), PDF↔Word (Could Have), Image to PDF (Won't Have — Phase 2).</p></div></div>
+      <div class="phase"><div class="phase-num">03</div><div class="phase-body"><h4>Design</h4><p>Chose a simple, functional layout. Described system architecture and Python Flask tech stack. Prioritised usability over aesthetics.</p></div></div>
+      <div class="phase"><div class="phase-num">04</div><div class="phase-body"><h4>Development</h4><p>Vibe-coded using LLMs, applying BA thinking to prompt engineering and requirement translation. The spec I wrote became the blueprint for every component.</p></div></div>
+      <div class="phase"><div class="phase-num">05</div><div class="phase-body"><h4>Testing</h4><p>Unit Testing (each component independently), System Testing (bulk upload of up to 100 ZIP files simultaneously), UAT (team members and friends gave real feedback).</p></div></div>
+      <div class="phase"><div class="phase-num">06</div><div class="phase-body"><h4>Deployment</h4><p>GitHub for version control → Vercel for hosting (free tier) → Namecheap domain → DNS configuration mapping domain to IP. Fully live at gkzipdf.com.</p></div></div>
+      <div class="phase"><div class="phase-num">07</div><div class="phase-body"><h4>Stakeholder Management</h4><p>A stakeholder requested Image-to-PDF mid-project. Assessed impact, managed expectations, and proposed a phased approach — core system now, feature in Phase 2. Classic BA move.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SWIGGY MODAL -->
+<div class="modal-overlay" id="swiggyModal" onclick="closeSwiggyModal(event)">
+  <div class="modal-box modal-box--wide">
+    <button class="modal-close" onclick="closeSwiggyModal()">✕</button>
+    <div class="modal-header">
+      <span class="modal-tag">Feature Proposal · Swiggy Instamart</span>
+      <h2>Insta-Bundles <span style="color:var(--navy-mid);">— Full Proposal</span></h2>
+      <p style="font-size:1.05rem;font-weight:600;color:var(--navy-dark);margin-bottom:0.75rem;padding:0.9rem 1.2rem;background:#EFF4FA;border-left:3px solid var(--navy);border-radius:0 8px 8px 0;">
+        🚀 Swiggy gave me <strong>10-minute delivery</strong> — I want to give Swiggy a <strong>10-second checkout</strong>. ⚡🛒
+      </p>
+      <p class="user-story-callout"><strong>User Story:</strong> As a fitness-focused "Gym Freak," I want to save my weekly staples as a single "Gym Bundle" — so I don't manually select 15+ favourites every three days.</p>
+    </div>
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab('overview')">Overview</button>
+      <button class="tab-btn" onclick="switchTab('brd')">BRD</button>
+      <button class="tab-btn" onclick="switchTab('frd')">FRD</button>
+      <button class="tab-btn" onclick="switchTab('prd')">PRD</button>
+      <button class="tab-btn" onclick="switchTab('video')">Demo Video</button>
+    </div>
+    <div class="tab-content active" id="tab-overview">
+      <div class="overview-grid">
+        <div class="ov-card"><h4>🎯 The Problem</h4><p>High-frequency users spend 180–300 seconds manually adding 10+ recurring items every 3 days. High bounce rates during the search-and-add phase.</p></div>
+        <div class="ov-card"><h4>💡 The Solution</h4><p>Replace unused "Print" icon with "Bundles" nav entry. Save cart snapshot, name it, repopulate in one tap — reducing Time to Checkout by 85–90%.</p></div>
+        <div class="ov-card"><h4>📈 Business Impact</h4><p>Projected 15% increase in monthly order volume per power user. Higher CLV and reduced cart abandonment during search-and-add phase.</p></div>
+        <div class="ov-card"><h4>🔧 Key Features</h4><ul><li>One-tap bundle population (&lt;500ms)</li><li>Real-time stock validation</li><li>Partial success notification if item OOS</li><li>Max 5 bundles per user profile</li><li>Cart append, not overwrite</li></ul></div>
+      </div>
+      <div class="swiggy-img-wrap">
+        <img src="assets/swiggy_pic.jpeg" alt="Swiggy Instamart Bundles UI" class="swiggy-img" />
+        <p class="img-caption">Swiggy Instamart UI — "Bundles" entry point in the bottom navigation bar.</p>
+      </div>
+    </div>
+    <div class="tab-content" id="tab-brd">
+      <iframe src="assets/BRD_Swiggy.pdf" class="doc-frame" title="Business Requirements Document"></iframe>
+    </div>
+    <div class="tab-content" id="tab-frd">
+      <iframe src="assets/FRD_Swiggy.pdf" class="doc-frame" title="Functional Requirements Document"></iframe>
+    </div>
+    <div class="tab-content" id="tab-prd">
+      <iframe src="assets/PRD_Swiggy.pdf" class="doc-frame" title="Product Requirements Document"></iframe>
+    </div>
+    <div class="tab-content" id="tab-video">
+      <video controls class="doc-frame" style="background:#000;">
+        <source src="assets/swiggy_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+const revealEls = document.querySelectorAll('.project-card,.skill-group,.about-card,.contact-card,.phase,.tl-content');
+revealEls.forEach(el => el.classList.add('reveal'));
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 60); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+revealEls.forEach(el => observer.observe(el));
+
+function openZipModal() { document.getElementById('zipModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeZipModal(e) { if (!e || e.target === e.currentTarget || e.target.classList.contains('modal-close')) { document.getElementById('zipModal').classList.remove('open'); document.body.style.overflow = ''; } }
+function openSwiggyModal() { document.getElementById('swiggyModal').classList.add('open'); document.body.style.overflow = 'hidden'; switchTab('overview'); }
+function closeSwiggyModal(e) { if (!e || e.target === e.currentTarget || e.target.classList.contains('modal-close')) { document.getElementById('swiggyModal').classList.remove('open'); document.body.style.overflow = ''; } }
+function switchTab(id) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(b => { if (b.getAttribute('onclick') === `switchTab('${id}')`) b.classList.add('active'); });
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeZipModal(); closeSwiggyModal(); } });
+</script>
 </body>
 </html>

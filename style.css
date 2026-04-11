@@ -1,21 +1,21 @@
 /* =============================================
    G KARTHIK PORTFOLIO — CORPORATE PREMIUM
-   Navy + Gold | Playfair Display + Outfit
+   Navy + White | Playfair Display + Outfit
    ============================================= */
 
 :root {
-  --navy-deep:  #07101F;
-  --navy-dark:  #0D1B2E;
-  --navy-mid:   #162744;
-  --navy-light: #1E3A5F;
-  --gold:       #C9A84C;
-  --gold-light: #E4C875;
-  --gold-pale:  rgba(201,168,76,0.12);
-  --cream:      #F5F0E8;
-  --text-main:  #E8E4DA;
-  --text-muted: #8FA3BD;
-  --border:     rgba(201,168,76,0.18);
-  --card-bg:    rgba(22,39,68,0.7);
+  --navy-deep:  #060F1C;
+  --navy-dark:  #0B1929;
+  --navy-mid:   #112240;
+  --navy-light: #1A3355;
+  --gold:       #38BDF8;
+  --gold-light: #7DD3FC;
+  --gold-pale:  rgba(56,189,248,0.10);
+  --cream:      #F0F8FF;
+  --text-main:  #E2EEF9;
+  --text-muted: #7B9BB8;
+  --border:     rgba(56,189,248,0.20);
+  --card-bg:    rgba(17,34,64,0.75);
   --radius:     12px;
   --radius-lg:  20px;
   --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
@@ -191,8 +191,8 @@ section { padding: 6rem 0; }
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(56,189,248,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,189,248,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
 }
@@ -202,7 +202,7 @@ section { padding: 6rem 0; }
   top: -200px; left: 50%;
   transform: translateX(-50%);
   width: 700px; height: 700px;
-  background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(56,189,248,0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-content {
@@ -296,7 +296,7 @@ section { padding: 6rem 0; }
   transition: var(--transition);
   animation: fadeUp 0.9s 0.5s ease both;
 }
-.hero-btn:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(201,168,76,0.25); }
+.hero-btn:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(56,189,248,0.18); }
 .hero-btn span { font-size: 1.2rem; animation: bounce 2s infinite; }
 @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(4px)} }
 
@@ -324,7 +324,7 @@ section { padding: 6rem 0; }
   gap: 1rem;
   margin-bottom: 1.5rem;
   padding: 0.6rem 1rem;
-  background: rgba(201,168,76,0.06);
+  background: rgba(56,189,248,0.05);
   border-left: 3px solid var(--gold);
   border-radius: 0 6px 6px 0;
 }
@@ -366,7 +366,7 @@ section { padding: 6rem 0; }
   opacity: 0;
   transition: var(--transition);
 }
-.project-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+.project-card:hover { border-color: rgba(56,189,248,0.35); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
 .project-card:hover::before { opacity: 1; }
 
 .project-card.featured { grid-column: span 1; }
@@ -401,10 +401,10 @@ section { padding: 6rem 0; }
   font-size: 0.72rem;
   font-weight: 500;
   padding: 0.25rem 0.65rem;
-  background: rgba(201,168,76,0.1);
+  background: rgba(56,189,248,0.08);
   color: var(--gold-light);
   border-radius: 4px;
-  border: 1px solid rgba(201,168,76,0.2);
+  border: 1px solid rgba(56,189,248,0.15);
 }
 .card-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
 
@@ -418,10 +418,10 @@ section { padding: 6rem 0; }
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0.25rem 0.7rem;
-  background: rgba(201,168,76,0.08);
+  background: rgba(56,189,248,0.06);
   color: var(--gold);
   border-radius: 4px;
-  border: 1px solid rgba(201,168,76,0.15);
+  border: 1px solid rgba(56,189,248,0.12);
 }
 
 /* ============================================================
@@ -443,7 +443,7 @@ section { padding: 6rem 0; }
   padding: 1.2rem 1.4rem;
   transition: var(--transition);
 }
-.about-card:hover { border-color: rgba(201,168,76,0.35); }
+.about-card:hover { border-color: rgba(56,189,248,0.25); }
 .ac-label {
   font-size: 0.7rem;
   letter-spacing: 0.15em;
@@ -452,7 +452,7 @@ section { padding: 6rem 0; }
   margin-bottom: 0.35rem;
 }
 .ac-value { font-size: 0.92rem; color: var(--text-main); }
-.gold-card { background: rgba(201,168,76,0.08); border-color: rgba(201,168,76,0.3); }
+.gold-card { background: rgba(56,189,248,0.06); border-color: rgba(56,189,248,0.22); }
 
 /* ============================================================
    SKILLS
@@ -470,7 +470,7 @@ section { padding: 6rem 0; }
   padding: 1.5rem;
   transition: var(--transition);
 }
-.skill-group:hover { border-color: rgba(201,168,76,0.35); }
+.skill-group:hover { border-color: rgba(56,189,248,0.25); }
 .skill-group h4 {
   font-size: 0.85rem;
   font-weight: 600;
@@ -484,13 +484,13 @@ section { padding: 6rem 0; }
 .skill-pills span {
   font-size: 0.78rem;
   padding: 0.3rem 0.7rem;
-  background: rgba(255,255,255,0.04);
+  background: rgba(56,189,248,0.04);
   color: var(--text-muted);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(56,189,248,0.08);
   border-radius: 4px;
   transition: var(--transition);
 }
-.skill-pills span:hover { background: var(--gold-pale); color: var(--gold-light); border-color: rgba(201,168,76,0.25); }
+.skill-pills span:hover { background: var(--gold-pale); color: var(--gold-light); border-color: rgba(56,189,248,0.18); }
 
 /* ============================================================
    EXPERIENCE
@@ -513,7 +513,7 @@ section { padding: 6rem 0; }
   border-radius: 50%;
   background: var(--gold);
   border: 3px solid var(--navy-deep);
-  box-shadow: 0 0 12px rgba(201,168,76,0.5);
+  box-shadow: 0 0 12px rgba(56,189,248,0.4);
 }
 .tl-content {
   background: var(--card-bg);
@@ -535,8 +535,8 @@ section { padding: 6rem 0; }
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--text-muted);
-  background: rgba(201,168,76,0.08);
-  border: 1px solid rgba(201,168,76,0.15);
+  background: rgba(56,189,248,0.06);
+  border: 1px solid rgba(56,189,248,0.12);
   padding: 0.3rem 0.8rem;
   border-radius: 4px;
   white-space: nowrap;
@@ -544,8 +544,18 @@ section { padding: 6rem 0; }
 .tl-industry {
   font-size: 0.78rem;
   color: var(--text-muted);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   letter-spacing: 0.05em;
+}
+.tl-project-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  background: rgba(56,189,248,0.05);
+  border-left: 2px solid var(--gold);
+  padding: 0.4rem 0.75rem;
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 1rem;
 }
 .tl-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
 .tl-list li {
@@ -572,7 +582,7 @@ section { padding: 6rem 0; }
 .contact-sub { font-size: 1.05rem; max-width: 500px; margin: 0 auto 3rem; }
 .contact-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   max-width: 900px;
   margin: 0 auto;
@@ -589,7 +599,7 @@ section { padding: 6rem 0; }
   transition: var(--transition);
   cursor: pointer;
 }
-.contact-card:hover { border-color: var(--gold); background: rgba(201,168,76,0.06); transform: translateY(-4px); }
+.contact-card:hover { border-color: var(--gold); background: rgba(56,189,248,0.05); transform: translateY(-4px); }
 .contact-icon {
   width: 44px; height: 44px;
   background: var(--gold-pale);
@@ -652,7 +662,7 @@ footer p { font-size: 0.82rem; color: var(--text-muted); }
 .modal-close {
   position: absolute;
   top: 1.2rem; right: 1.2rem;
-  background: rgba(255,255,255,0.06);
+  background: rgba(56,189,248,0.06);
   border: 1px solid var(--border);
   color: var(--text-muted);
   width: 34px; height: 34px;
@@ -664,7 +674,7 @@ footer p { font-size: 0.82rem; color: var(--text-muted); }
   align-items: center;
   justify-content: center;
 }
-.modal-close:hover { background: rgba(201,168,76,0.12); color: var(--gold); border-color: var(--gold); }
+.modal-close:hover { background: rgba(56,189,248,0.10); color: var(--gold); border-color: var(--gold); }
 
 .modal-header { margin-bottom: 2rem; }
 .modal-tag {
@@ -684,12 +694,12 @@ footer p { font-size: 0.82rem; color: var(--text-muted); }
   display: flex;
   gap: 1.25rem;
   padding: 1.25rem;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(56,189,248,0.02);
+  border: 1px solid rgba(56,189,248,0.06);
   border-radius: var(--radius);
   transition: var(--transition);
 }
-.phase:hover { border-color: rgba(201,168,76,0.25); background: rgba(201,168,76,0.03); }
+.phase:hover { border-color: rgba(56,189,248,0.18); background: rgba(56,189,248,0.03); }
 .phase-num {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
@@ -703,7 +713,7 @@ footer p { font-size: 0.82rem; color: var(--text-muted); }
 
 /* ---- SWIGGY MODAL ---- */
 .user-story-callout {
-  background: rgba(201,168,76,0.08);
+  background: rgba(56,189,248,0.06);
   border-left: 3px solid var(--gold);
   border-radius: 0 8px 8px 0;
   padding: 0.9rem 1.2rem;
@@ -746,8 +756,8 @@ footer p { font-size: 0.82rem; color: var(--text-muted); }
   margin-bottom: 1.5rem;
 }
 .ov-card {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(56,189,248,0.02);
+  border: 1px solid rgba(56,189,248,0.06);
   border-radius: var(--radius);
   padding: 1.2rem;
 }

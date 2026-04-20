@@ -202,7 +202,14 @@ footer p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
 .pdf-open-btn:hover { background: var(--navy-mid); }
 .pdf-dl-btn { font-size: 0.78rem; font-weight: 600; padding: 0.4rem 0.9rem; background: transparent; color: var(--navy); border: 1.5px solid var(--navy); border-radius: 6px; transition: var(--transition); white-space: nowrap; }
 .pdf-dl-btn:hover { background: var(--gold-pale); }
-.pdf-fallback { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; height: 300px; background: #FAFBFD; border: 1px solid var(--border); border-radius: var(--radius); }
+.pdf-nav { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
+.pdf-pg-btn { padding: 0.35rem 0.9rem; background: var(--off-white); border: 1px solid var(--border); border-radius: 6px; color: var(--navy); font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: var(--transition); }
+.pdf-pg-btn:hover:not(:disabled) { background: #EFF4FA; border-color: var(--navy); }
+.pdf-pg-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.pdf-page-info { font-size: 0.8rem; color: var(--text-muted); flex: 1; text-align: center; }
+.pdf-canvas-wrap { width: 100%; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: #fff; min-height: 300px; display: flex; align-items: center; justify-content: center; }
+.pdf-canvas { display: block; width: 100%; height: auto; }
+.pdf-fallback { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 3rem; }
 .pdf-fallback p { color: var(--text-muted); font-size: 0.9rem; }
 
 /* PRD badge */

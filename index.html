@@ -348,46 +348,52 @@
     </div>
 
     <div class="tab-content" id="tab-brd">
-      <div class="pdf-toolbar">
-        <span class="pdf-label">📄 Business Requirements Document</span>
-        <a href="assets/BRD_Swiggy.pdf" target="_blank" class="pdf-open-btn">Open in new tab ↗</a>
-        <a href="assets/BRD_Swiggy.pdf" download class="pdf-dl-btn">Download ↓</a>
+      <div class="doc-card">
+        <div class="doc-card-icon">📋</div>
+        <div class="doc-card-body">
+          <p class="doc-card-type">Business Requirements Document</p>
+          <h4 class="doc-card-title">Swiggy Insta-Bundles — BRD</h4>
+          <p class="doc-card-desc">Covers business objectives, stakeholder analysis, scope, assumptions, and high-level requirements for the Favourite Bundles feature.</p>
+          <div class="doc-card-chips"><span>Business Objectives</span><span>Stakeholder Analysis</span><span>Scope & Constraints</span><span>High-Level Requirements</span></div>
+        </div>
+        <div class="doc-card-actions">
+          <a href="assets/BRD_Swiggy.pdf" target="_blank" class="btn-gold">Open BRD ↗</a>
+          <a href="assets/BRD_Swiggy.pdf" download class="btn-outline">Download ↓</a>
+        </div>
       </div>
-      <div class="pdf-nav" id="brd-nav">
-        <button onclick="prevPage('brd')" class="pdf-pg-btn">← Prev</button>
-        <span id="brd-page-info" class="pdf-page-info">Page 1</span>
-        <button onclick="nextPage('brd')" class="pdf-pg-btn">Next →</button>
-      </div>
-      <div class="pdf-canvas-wrap"><canvas id="brd-canvas" class="pdf-canvas"></canvas></div>
     </div>
 
     <div class="tab-content" id="tab-frd">
-      <div class="pdf-toolbar">
-        <span class="pdf-label">📄 Functional Requirements Document</span>
-        <a href="assets/FRD_Swiggy.pdf" target="_blank" class="pdf-open-btn">Open in new tab ↗</a>
-        <a href="assets/FRD_Swiggy.pdf" download class="pdf-dl-btn">Download ↓</a>
+      <div class="doc-card">
+        <div class="doc-card-icon">⚙️</div>
+        <div class="doc-card-body">
+          <p class="doc-card-type">Functional Requirements Document</p>
+          <h4 class="doc-card-title">Swiggy Insta-Bundles — FRD</h4>
+          <p class="doc-card-desc">Detailed functional specifications covering system behaviour, UI flows, API interactions, and edge case handling for the Bundles feature.</p>
+          <div class="doc-card-chips"><span>Functional Specs</span><span>UI Flows</span><span>API Interactions</span><span>Edge Cases</span></div>
+        </div>
+        <div class="doc-card-actions">
+          <a href="assets/FRD_Swiggy.pdf" target="_blank" class="btn-gold">Open FRD ↗</a>
+          <a href="assets/FRD_Swiggy.pdf" download class="btn-outline">Download ↓</a>
+        </div>
       </div>
-      <div class="pdf-nav" id="frd-nav">
-        <button onclick="prevPage('frd')" class="pdf-pg-btn">← Prev</button>
-        <span id="frd-page-info" class="pdf-page-info">Page 1</span>
-        <button onclick="nextPage('frd')" class="pdf-pg-btn">Next →</button>
-      </div>
-      <div class="pdf-canvas-wrap"><canvas id="frd-canvas" class="pdf-canvas"></canvas></div>
     </div>
 
     <div class="tab-content" id="tab-prd">
       <div class="prd-badge">✅ Updated with full Acceptance Criteria — v2.0</div>
-      <div class="pdf-toolbar">
-        <span class="pdf-label">📄 Product Requirements Document v2</span>
-        <a href="assets/PRD_Swiggy_Insta_Bundles_.pdf" target="_blank" class="pdf-open-btn">Open in new tab ↗</a>
-        <a href="assets/PRD_Swiggy_Insta_Bundles_.pdf" download class="pdf-dl-btn">Download ↓</a>
+      <div class="doc-card">
+        <div class="doc-card-icon">🚀</div>
+        <div class="doc-card-body">
+          <p class="doc-card-type">Product Requirements Document · v2.0</p>
+          <h4 class="doc-card-title">Swiggy Insta-Bundles — PRD</h4>
+          <p class="doc-card-desc">Complete PRD with user stories, functional requirements, UX specs, KPIs, technical constraints — and full Given/When/Then Acceptance Criteria for every requirement.</p>
+          <div class="doc-card-chips"><span>User Stories</span><span>Acceptance Criteria</span><span>KPIs</span><span>UX Specs</span><span>Technical Constraints</span></div>
+        </div>
+        <div class="doc-card-actions">
+          <a href="assets/PRD_Swiggy_Insta_Bundles_.pdf" target="_blank" class="btn-gold">Open PRD v2 ↗</a>
+          <a href="assets/PRD_Swiggy_Insta_Bundles_.pdf" download class="btn-outline">Download ↓</a>
+        </div>
       </div>
-      <div class="pdf-nav" id="prd-nav">
-        <button onclick="prevPage('prd')" class="pdf-pg-btn">← Prev</button>
-        <span id="prd-page-info" class="pdf-page-info">Page 1</span>
-        <button onclick="nextPage('prd')" class="pdf-pg-btn">Next →</button>
-      </div>
-      <div class="pdf-canvas-wrap"><canvas id="prd-canvas" class="pdf-canvas"></canvas></div>
     </div>
     <div class="tab-content" id="tab-video">
       <video controls class="doc-frame" style="background:#000;">
@@ -398,61 +404,7 @@
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>
-  // PDF.js setup
-  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-  const pdfDocs = {};
-  const pdfPages = { brd: 1, frd: 1, prd: 1 };
-  const pdfFiles = {
-    brd: 'assets/BRD_Swiggy.pdf',
-    frd: 'assets/FRD_Swiggy.pdf',
-    prd: 'assets/PRD_Swiggy_Insta_Bundles_.pdf'
-  };
-
-  async function loadPDF(key) {
-    if (pdfDocs[key]) return;
-    try {
-      const loadingTask = pdfjsLib.getDocument(pdfFiles[key]);
-      pdfDocs[key] = await loadingTask.promise;
-      await renderPage(key, 1);
-    } catch (e) {
-      const canvas = document.getElementById(key + '-canvas');
-      if (canvas) {
-        canvas.style.display = 'none';
-        const wrap = canvas.parentElement;
-        wrap.innerHTML = `<div class="pdf-fallback"><p>Could not load PDF preview.</p><a href="${pdfFiles[key]}" target="_blank" class="btn-gold">Open PDF ↗</a></div>`;
-      }
-    }
-  }
-
-  async function renderPage(key, pageNum) {
-    if (!pdfDocs[key]) return;
-    const pdf = pdfDocs[key];
-    const total = pdf.numPages;
-    pageNum = Math.max(1, Math.min(pageNum, total));
-    pdfPages[key] = pageNum;
-
-    const page = await pdf.getPage(pageNum);
-    const canvas = document.getElementById(key + '-canvas');
-    const ctx = canvas.getContext('2d');
-    const containerWidth = canvas.parentElement.offsetWidth || 800;
-    const viewport = page.getViewport({ scale: 1 });
-    const scale = containerWidth / viewport.width;
-    const scaledViewport = page.getViewport({ scale });
-    canvas.width = scaledViewport.width;
-    canvas.height = scaledViewport.height;
-    await page.render({ canvasContext: ctx, viewport: scaledViewport }).promise;
-
-    document.getElementById(key + '-page-info').textContent = `Page ${pageNum} of ${total}`;
-    document.getElementById(key + '-nav').querySelector('button:first-child').disabled = pageNum <= 1;
-    document.getElementById(key + '-nav').querySelector('button:last-child').disabled = pageNum >= total;
-  }
-
-  function prevPage(key) { renderPage(key, pdfPages[key] - 1); }
-  function nextPage(key) { renderPage(key, pdfPages[key] + 1); }
-
   // Hamburger
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -479,15 +431,12 @@
   function closeZipModal(e) { if (!e || e.target === e.currentTarget || e.target.classList.contains('modal-close')) { document.getElementById('zipModal').classList.remove('open'); document.body.style.overflow = ''; } }
   function openSwiggyModal() { document.getElementById('swiggyModal').classList.add('open'); document.body.style.overflow = 'hidden'; switchTab('overview'); }
   function closeSwiggyModal(e) { if (!e || e.target === e.currentTarget || e.target.classList.contains('modal-close')) { document.getElementById('swiggyModal').classList.remove('open'); document.body.style.overflow = ''; } }
-
   function switchTab(id) {
     document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     document.getElementById('tab-' + id).classList.add('active');
     document.querySelectorAll('.tab-btn').forEach(b => { if (b.getAttribute('onclick') === `switchTab('${id}')`) b.classList.add('active'); });
-    if (['brd','frd','prd'].includes(id)) loadPDF(id);
   }
-
   document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeZipModal(); closeSwiggyModal(); } });
 
   // Animated counters

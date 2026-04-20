@@ -11,6 +11,7 @@
 </head>
 <body>
 
+<!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
     <div style="display:flex;align-items:center;gap:0.75rem;">
@@ -41,6 +42,9 @@
 <section id="hero">
   <div class="hero-bg-grid"></div>
   <div class="hero-content">
+    <div class="hero-avatar-wrap">
+      <img src="assets/karthik.jpeg" alt="G Karthik" class="hero-avatar" />
+    </div>
     <p class="hero-label">Business Analyst · Hyderabad</p>
     <h1 class="hero-title">G <span>Karthik</span></h1>
     <p class="hero-sub">🤝 Bridging the gap between business teams &amp; development teams — translating business needs into technological solutions. 💡</p>
@@ -53,7 +57,10 @@
       <div class="metric-divider"></div>
       <div class="metric"><span class="metric-num">0</span><span class="metric-label">Critical Defects at Go-Live</span></div>
     </div>
-    <a href="#projects" class="hero-btn">View My Work <span>↓</span></a>
+    <div class="hero-cta-row">
+      <a href="#projects" class="hero-btn">View My Work <span>↓</span></a>
+      <a href="https://www.linkedin.com/in/karthikgokaraju" target="_blank" class="hero-btn-outline">LinkedIn ↗</a>
+    </div>
   </div>
   <div class="hero-scroll-hint">scroll</div>
 </section>
@@ -64,10 +71,12 @@
     <p class="section-label">Case Studies</p>
     <h2 class="section-title">Work That <span style="color:var(--navy-mid);">Speaks</span></h2>
     <p class="section-sub">Three professional projects. Two personal ones. All built with rigour.</p>
+
     <div class="personal-banner">
       <span class="pb-tag">Personal Projects</span>
       <span class="pb-note">Built on personal interest — demonstrating initiative beyond the job description.</span>
     </div>
+
     <div class="projects-grid">
       <div class="project-card">
         <div class="card-tag">Personal · SDLC End-to-End</div>
@@ -88,9 +97,9 @@
         <div class="card-tag">Personal · Feature Proposal</div>
         <div class="card-icon">🛒</div>
         <h3>Swiggy Insta-Bundles</h3>
-        <p class="card-desc">A complete product feature proposal for Swiggy Instamart — from user story to BRD, FRD, and PRD. Identified a real friction point for power users and documented a production-ready solution.</p>
+        <p class="card-desc">A complete product feature proposal for Swiggy Instamart — from user story to BRD, FRD, and PRD with full Acceptance Criteria. Identified a real friction point for power users and documented a production-ready solution.</p>
         <div class="card-chips">
-          <span>User Story</span><span>BRD</span><span>FRD</span><span>PRD</span><span>UX Thinking</span>
+          <span>User Story</span><span>BRD</span><span>FRD</span><span>PRD</span><span>Acceptance Criteria</span><span>UX Thinking</span>
         </div>
         <div class="card-actions">
           <button class="btn-gold" onclick="openSwiggyModal()">View Full Proposal</button>
@@ -153,6 +162,9 @@
       <p>I believe a great BA doesn't just document requirements — they <em>drive outcomes</em>.</p>
     </div>
     <div class="about-sidebar">
+      <div class="about-photo-card">
+        <img src="assets/karthik.jpeg" alt="G Karthik" class="about-photo" />
+      </div>
       <div class="about-card"><p class="ac-label">Domain</p><p class="ac-value">Cosmetics &amp; Beauty · Supply Chain · E-Commerce</p></div>
       <div class="about-card"><p class="ac-label">Methodology</p><p class="ac-value">Agile (Scrum) · Waterfall · SDLC</p></div>
       <div class="about-card"><p class="ac-label">Signature Skill</p><p class="ac-value">Zero critical defects at go-live — across all 3 deployments</p></div>
@@ -318,9 +330,10 @@
       <button class="tab-btn active" onclick="switchTab('overview')">Overview</button>
       <button class="tab-btn" onclick="switchTab('brd')">BRD</button>
       <button class="tab-btn" onclick="switchTab('frd')">FRD</button>
-      <button class="tab-btn" onclick="switchTab('prd')">PRD</button>
+      <button class="tab-btn" onclick="switchTab('prd')">PRD v2</button>
       <button class="tab-btn" onclick="switchTab('video')">Demo Video</button>
     </div>
+
     <div class="tab-content active" id="tab-overview">
       <div class="overview-grid">
         <div class="ov-card"><h4>🎯 The Problem</h4><p>High-frequency users spend 180–300 seconds manually adding 10+ recurring items every 3 days. High bounce rates during the search-and-add phase.</p></div>
@@ -333,6 +346,7 @@
         <p class="img-caption">Swiggy Instamart UI — "Bundles" entry point in the bottom navigation bar.</p>
       </div>
     </div>
+
     <div class="tab-content" id="tab-brd">
       <iframe src="assets/BRD_Swiggy.pdf" class="doc-frame" title="Business Requirements Document"></iframe>
     </div>
@@ -340,7 +354,8 @@
       <iframe src="assets/FRD_Swiggy.pdf" class="doc-frame" title="Functional Requirements Document"></iframe>
     </div>
     <div class="tab-content" id="tab-prd">
-      <iframe src="assets/PRD_Swiggy.pdf" class="doc-frame" title="Product Requirements Document"></iframe>
+      <div class="prd-badge">✅ Updated with full Acceptance Criteria — v2.0</div>
+      <iframe src="assets/PRD_Swiggy_Insta_Bundles_.pdf" class="doc-frame" title="Product Requirements Document v2"></iframe>
     </div>
     <div class="tab-content" id="tab-video">
       <video controls class="doc-frame" style="background:#000;">
@@ -352,31 +367,60 @@
 </div>
 
 <script>
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
 
-const revealEls = document.querySelectorAll('.project-card,.skill-group,.about-card,.contact-card,.phase,.tl-content');
-revealEls.forEach(el => el.classList.add('reveal'));
-const observer = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 60); observer.unobserve(e.target); }
+  // Navbar scroll shrink
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
   });
-}, { threshold: 0.1 });
-revealEls.forEach(el => observer.observe(el));
 
-function openZipModal() { document.getElementById('zipModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
-function closeZipModal(e) { if (!e || e.target === e.currentTarget || e.target.classList.contains('modal-close')) { document.getElementById('zipModal').classList.remove('open'); document.body.style.overflow = ''; } }
-function openSwiggyModal() { document.getElementById('swiggyModal').classList.add('open'); document.body.style.overflow = 'hidden'; switchTab('overview'); }
-function closeSwiggyModal(e) { if (!e || e.target === e.currentTarget || e.target.classList.contains('modal-close')) { document.getElementById('swiggyModal').classList.remove('open'); document.body.style.overflow = ''; } }
-function switchTab(id) {
-  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + id).classList.add('active');
-  document.querySelectorAll('.tab-btn').forEach(b => { if (b.getAttribute('onclick') === `switchTab('${id}')`) b.classList.add('active'); });
-}
-document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeZipModal(); closeSwiggyModal(); } });
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.project-card,.skill-group,.about-card,.contact-card,.phase,.tl-content,.about-photo-card');
+  revealEls.forEach(el => el.classList.add('reveal'));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 60); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Modals
+  function openZipModal() { document.getElementById('zipModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeZipModal(e) { if (!e || e.target === e.currentTarget || e.target.classList.contains('modal-close')) { document.getElementById('zipModal').classList.remove('open'); document.body.style.overflow = ''; } }
+  function openSwiggyModal() { document.getElementById('swiggyModal').classList.add('open'); document.body.style.overflow = 'hidden'; switchTab('overview'); }
+  function closeSwiggyModal(e) { if (!e || e.target === e.currentTarget || e.target.classList.contains('modal-close')) { document.getElementById('swiggyModal').classList.remove('open'); document.body.style.overflow = ''; } }
+  function switchTab(id) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    document.querySelectorAll('.tab-btn').forEach(b => { if (b.getAttribute('onclick') === `switchTab('${id}')`) b.classList.add('active'); });
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeZipModal(); closeSwiggyModal(); } });
+
+  // Animated counters
+  function animateCounter(el) {
+    const target = parseFloat(el.textContent);
+    const suffix = el.textContent.replace(/[\d.]/g, '');
+    let start = 0;
+    const duration = 1800;
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = (Math.round(target * eased * 10) / 10) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  const metricNums = document.querySelectorAll('.metric-num');
+  const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); counterObserver.unobserve(e.target); } });
+  }, { threshold: 0.5 });
+  metricNums.forEach(el => counterObserver.observe(el));
 </script>
 </body>
 </html>

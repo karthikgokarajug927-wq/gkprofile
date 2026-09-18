@@ -3,246 +3,252 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>G Karthik | Procurement Manager</title>
+  <title>Gokaraju Karthik — Procurement Manager</title>
+  <meta name="description" content="Procurement Manager delivering ₹15L savings, 50% logistics cost reduction and zero audit non-compliance across Cosmetics & Beauty supply chains."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <!-- GSAP + ScrollTrigger -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <!-- Three.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- CUSTOM CURSOR -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="cursorFollower"></div>
+<!-- CURSOR -->
+<div id="cursor"><div id="cursor-dot"></div></div>
+<div id="cursor-ring"></div>
+<div id="cursor-label"></div>
 
 <!-- LOADER -->
-<div class="loader" id="loader">
-  <div class="loader-inner">
-    <div class="loader-text">GK</div>
-    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+<div id="loader">
+  <div class="ldr-inner">
+    <div class="ldr-name">GK</div>
+    <div class="ldr-line"><div class="ldr-progress" id="ldrProgress"></div></div>
+    <div class="ldr-sub" id="ldrSub">Loading experience...</div>
   </div>
 </div>
 
-<!-- NAV -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <div class="nav-brand">
-      <img src="assets/karthik.jpeg" alt="G Karthik" class="nav-photo"/>
-      <span class="nav-logo">G<span class="accent">K</span><span class="nav-dot">.</span></span>
-    </div>
+<!-- NAVBAR -->
+<nav id="nav">
+  <div class="nav-wrap">
+    <a href="#hero" class="nav-logo">
+      <img src="assets/karthik.jpeg" alt="GK" class="nav-avatar"/>
+      <span>GK<span class="dot">.</span></span>
+    </a>
     <ul class="nav-links">
-      <li><a href="#achievements" class="nav-link">Impact</a></li>
-      <li><a href="#experience" class="nav-link">Experience</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#contact" class="nav-cta magnetic">Contact</a></li>
+      <li><a href="#about" class="nl">About</a></li>
+      <li><a href="#experience" class="nl">Experience</a></li>
+      <li><a href="#skills" class="nl">Skills</a></li>
+      <li><a href="#projects" class="nl">Projects</a></li>
+      <li><a href="#contact" class="nl">Contact</a></li>
     </ul>
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#achievements">Impact</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#contact" class="nav-cta">Let's Connect →</a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" id="mobClose">✕</button>
+  <nav class="mob-nav">
+    <a href="#about"      class="mob-link" data-num="01">About</a>
+    <a href="#experience" class="mob-link" data-num="02">Experience</a>
+    <a href="#skills"     class="mob-link" data-num="03">Skills</a>
+    <a href="#projects"   class="mob-link" data-num="04">Projects</a>
+    <a href="#contact"    class="mob-link" data-num="05">Contact</a>
+  </nav>
+  <div class="mob-foot">
+    <span>BTM Ventures · Dóveriye</span>
+    <span>Hyderabad, India</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
 <section id="hero">
-  <canvas id="heroCanvas"></canvas>
-  <div class="hero-content">
-    <div class="hero-left">
-      <div class="hero-eyebrow-wrap">
-        <span class="hero-line"></span>
-        <span class="hero-eyebrow">Procurement &amp; Supply Chain</span>
+  <div class="hero-pin" id="heroPin">
+    <!-- Background grid -->
+    <div class="h-grid"></div>
+    <!-- Photo -->
+    <div class="h-photo-wrap" id="hPhoto">
+      <img src="assets/karthik.jpeg" alt="Gokaraju Karthik" class="h-photo"/>
+      <div class="h-photo-overlay"></div>
+    </div>
+    <!-- Left text -->
+    <div class="h-left">
+      <div class="h-eyebrow">
+        <span class="h-line"></span>
+        <span>Procurement Manager</span>
       </div>
-      <h1 class="hero-name">
-        <span class="name-line" data-text="Gokaraju">Gokaraju</span>
-        <span class="name-line italic accent-text" data-text="Karthik">Karthik</span>
+      <h1 class="h-name">
+        <span class="h-n1">Gokaraju</span>
+        <span class="h-n2"><em>Karthik</em></span>
       </h1>
-      <p class="hero-tagline">Turning supplier relationships into strategic advantage — <strong>₹15L saved</strong>, <strong>50% logistics costs cut</strong>, <strong>zero audit non-compliance</strong>.</p>
-      <div class="hero-badges">
-        <span class="badge">Strategic Sourcing</span>
-        <span class="badge">Vendor Management</span>
-        <span class="badge">Cost Negotiation</span>
-        <span class="badge">Import Procurement</span>
-      </div>
-      <div class="hero-actions">
-        <a href="#achievements" class="btn-primary magnetic">View My Impact <span class="btn-arrow">↓</span></a>
-        <a href="#contact" class="btn-secondary magnetic">Let's Connect</a>
+    </div>
+    <!-- Right text -->
+    <div class="h-right">
+      <p class="h-tagline">Turning supplier relationships<br/>into <strong>strategic advantage.</strong></p>
+      <p class="h-sub">₹15L saved · 50% logistics cut<br/>100% audit compliance · 5+ years</p>
+    </div>
+    <!-- Bottom -->
+    <div class="h-bottom">
+      <a href="#about" class="h-cta">View My Impact</a>
+      <div class="h-scroll-hint" id="hScroll">
+        <div class="h-scroll-line"></div>
+        <span>SCROLL TO EXPLORE</span>
       </div>
     </div>
-    <div class="hero-right">
-      <div class="hero-stat-card" id="statCard">
-        <div class="stat-item">
-          <span class="stat-num" data-target="15">0</span>
-          <span class="stat-suffix">L</span>
-          <span class="stat-prefix">₹</span>
-          <span class="stat-label">Cost Savings</span>
-        </div>
-        <div class="stat-div"></div>
-        <div class="stat-item">
-          <span class="stat-num" data-target="50">0</span>
-          <span class="stat-suffix">%</span>
-          <span class="stat-label">Logistics Cut</span>
-        </div>
-        <div class="stat-div"></div>
-        <div class="stat-item">
-          <span class="stat-num" data-target="5">0</span>
-          <span class="stat-suffix">+</span>
-          <span class="stat-label">Years Exp.</span>
-        </div>
-        <div class="stat-div"></div>
-        <div class="stat-item">
-          <span class="stat-num" data-target="100">0</span>
-          <span class="stat-suffix">%</span>
-          <span class="stat-label">Audit Compliance</span>
-        </div>
-      </div>
-      <div class="hero-company" id="heroCompany">
-        <span class="hc-pulse"></span>
-        <div>
-          <span class="hc-label">Currently at</span>
-          <span class="hc-name">BTM Ventures Pvt Ltd</span>
-          <span class="hc-role">Procurement Manager · Dóveriye Brand</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll-hint">
-    <div class="scroll-line"></div>
-    <span>scroll</span>
+    <!-- Corner label -->
+    <div class="h-corner">BTM Ventures · Dóveriye · Hyderabad</div>
   </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="section-eyebrow">Key Achievements</span>
-      <h2 class="section-title">Results That <em>Matter</em></h2>
-    </div>
-    <div class="ach-grid">
-      <div class="ach-card gold gsap-reveal">
-        <div class="ach-icon">🏆</div>
-        <h3>Best Employee of the Year</h3>
-        <p>Awarded at Esthetic Insights Pvt Ltd — 2022 — for outstanding procurement excellence and cost optimisation.</p>
-        <div class="ach-glow"></div>
+<!-- ═══════════════════════════ MARQUEE ═══════════════════════════ -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marquee">
+    <span>STRATEGIC SOURCING</span><span class="mx">·</span>
+    <span>VENDOR MANAGEMENT</span><span class="mx">·</span>
+    <span>COST NEGOTIATION</span><span class="mx">·</span>
+    <span>IMPORT PROCUREMENT</span><span class="mx">·</span>
+    <span>SUPPLY CHAIN</span><span class="mx">·</span>
+    <span>SAP · ZOHO</span><span class="mx">·</span>
+    <span>LOGISTICS OPTIMISATION</span><span class="mx">·</span>
+    <span>STRATEGIC SOURCING</span><span class="mx">·</span>
+    <span>VENDOR MANAGEMENT</span><span class="mx">·</span>
+    <span>COST NEGOTIATION</span><span class="mx">·</span>
+    <span>IMPORT PROCUREMENT</span><span class="mx">·</span>
+    <span>SUPPLY CHAIN</span><span class="mx">·</span>
+    <span>SAP · ZOHO</span><span class="mx">·</span>
+    <span>LOGISTICS OPTIMISATION</span><span class="mx">·</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+<section id="about" class="s-about">
+  <div class="sw">
+    <div class="s-tag">// 01 About</div>
+    <h2 class="s-title">More than a<br/><em>procurement professional.</em></h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I build supply chains that <strong>never break</strong>. With 5+ years of progressive experience in strategic sourcing, vendor management, and logistics optimisation — primarily within the Cosmetics & Beauty domain — I've consistently delivered outcomes that matter.</p>
+        <p>From <strong>Esthetic Insights</strong> to <strong>V Cosmetic Crafters</strong> to my current role at <strong>BTM Ventures</strong> managing the <strong>Dóveriye</strong> premium brand — every role has been defined by measurable results, zero audit findings, and supplier relationships built on trust.</p>
+        <p>Great procurement isn't just about buying cheaper. It's about <strong>engineering supply chains that create competitive advantage.</strong></p>
       </div>
-      <div class="ach-card gsap-reveal">
-        <div class="ach-icon">💰</div>
-        <h3>₹15 Lakhs Cumulative Savings</h3>
-        <p>Delivered through strategic negotiation with raw material &amp; packaging vendors — volume pricing &amp; payment term optimisation.</p>
-        <div class="ach-glow"></div>
-      </div>
-      <div class="ach-card gsap-reveal">
-        <div class="ach-icon">🚚</div>
-        <h3>50% Logistics Cost Reduction</h3>
-        <p>Reduced per-kg freight from ₹16 to ₹8 by identifying a new logistics partner. Savings sustained over 4 years.</p>
-        <div class="ach-glow"></div>
-      </div>
-      <div class="ach-card gsap-reveal">
-        <div class="ach-icon">📦</div>
-        <h3>20% Faster Procurement Cycles</h3>
-        <p>Reduced lead times through vendor rationalisation, process improvements, and SAP &amp; ZOHO digitisation.</p>
-        <div class="ach-glow"></div>
-      </div>
-      <div class="ach-card gsap-reveal">
-        <div class="ach-icon">✅</div>
-        <h3>100% Audit Compliance</h3>
-        <p>Zero non-conformance findings across all internal and external procurement audits through meticulous documentation.</p>
-        <div class="ach-glow"></div>
-      </div>
-      <div class="ach-card gsap-reveal">
-        <div class="ach-icon">🤝</div>
-        <h3>30% Vendor Base Expansion</h3>
-        <p>Strategic vendor identification &amp; onboarding — ensuring supply continuity, quality compliance, and competitive pricing.</p>
-        <div class="ach-glow"></div>
+      <div class="about-stats reveal">
+        <div class="as-item"><span class="as-num">₹15L</span><span class="as-label">Cumulative Cost Savings</span></div>
+        <div class="as-item"><span class="as-num">50%</span><span class="as-label">Logistics Cost Reduction</span></div>
+        <div class="as-item"><span class="as-num">30%</span><span class="as-label">Vendor Base Expanded</span></div>
+        <div class="as-item"><span class="as-num">0</span><span class="as-label">Audit Non-Compliances</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="section-eyebrow">Career Journey</span>
-      <h2 class="section-title">Work <em>Experience</em></h2>
+<!-- ═══════════════════════════ ACHIEVEMENTS ═══════════════════════════ -->
+<section id="achievements" class="s-ach">
+  <div class="sw">
+    <div class="s-tag">// 02 Achievements</div>
+    <h2 class="s-title">Results that<br/><em>define careers.</em></h2>
+    <div class="ach-list">
+      <div class="ach-item reveal">
+        <span class="ai-num">01</span>
+        <div class="ai-body">
+          <h3>🏆 Best Employee of the Year — 2022</h3>
+          <p>Awarded at Esthetic Insights Pvt Ltd for outstanding procurement excellence and cost optimisation.</p>
+        </div>
+        <span class="ai-tag">Recognition</span>
+      </div>
+      <div class="ach-item reveal">
+        <span class="ai-num">02</span>
+        <div class="ai-body">
+          <h3>₹15 Lakhs Cumulative Savings</h3>
+          <p>Delivered through strategic negotiation with raw material and packaging vendors — volume pricing and payment term optimisation.</p>
+        </div>
+        <span class="ai-tag">Cost Control</span>
+      </div>
+      <div class="ach-item reveal">
+        <span class="ai-num">03</span>
+        <div class="ai-body">
+          <h3>50% Logistics Cost Reduction</h3>
+          <p>Reduced per-kg freight from ₹16 to ₹8 by identifying and onboarding a new logistics partner. Sustained over 4 years.</p>
+        </div>
+        <span class="ai-tag">Logistics</span>
+      </div>
+      <div class="ach-item reveal">
+        <span class="ai-num">04</span>
+        <div class="ai-body">
+          <h3>100% Audit Compliance</h3>
+          <p>Zero non-conformance findings across all internal and external procurement audits through meticulous documentation.</p>
+        </div>
+        <span class="ai-tag">Compliance</span>
+      </div>
+      <div class="ach-item reveal">
+        <span class="ai-num">05</span>
+        <div class="ai-body">
+          <h3>20% Faster Procurement Cycles</h3>
+          <p>Reduced lead times through vendor rationalisation, process improvements, and SAP & ZOHO digitisation of PO workflows.</p>
+        </div>
+        <span class="ai-tag">Efficiency</span>
+      </div>
     </div>
-    <div class="timeline">
+  </div>
+</section>
 
-      <div class="tl-item gsap-reveal">
-        <div class="tl-marker">
-          <div class="tl-dot current"></div>
-          <span class="current-badge">Now</span>
+<!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
+<section id="experience" class="s-exp">
+  <div class="sw">
+    <div class="s-tag">// 03 Experience</div>
+    <h2 class="s-title">Where I've<br/><em>created impact.</em></h2>
+    <div class="exp-list">
+
+      <div class="exp-item reveal" data-current="true">
+        <div class="exp-left">
+          <div class="exp-dot current"></div>
+          <div class="exp-date">May 2026 — Present</div>
+          <div class="exp-badge">Current</div>
         </div>
-        <div class="tl-card">
-          <div class="tl-header">
-            <div>
-              <h3>Procurement Manager</h3>
-              <p class="tl-company">BTM Ventures Pvt Ltd <span class="tl-brand">· Dóveriye Brand</span></p>
-            </div>
-            <span class="tl-date">May 2026 – Present</span>
-          </div>
-          <p class="tl-location">📍 Hyderabad, India</p>
-          <ul class="tl-list">
-            <li>Leading end-to-end procurement for the <strong>Dóveriye</strong> premium cosmetics brand</li>
-            <li>Managing strategic sourcing for raw materials and packaging across domestic and international suppliers</li>
-            <li>Driving supplier evaluation, contract negotiations, and vendor performance management</li>
+        <div class="exp-right">
+          <h3>Procurement Manager</h3>
+          <div class="exp-co">BTM Ventures Pvt Ltd <span>· Dóveriye Brand</span></div>
+          <p>Leading end-to-end procurement for the Dóveriye premium cosmetics brand. Managing strategic sourcing across domestic and international suppliers, driving supplier evaluation and contract negotiations.</p>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-left">
+          <div class="exp-dot"></div>
+          <div class="exp-date">Oct 2024 — Apr 2026</div>
+        </div>
+        <div class="exp-right">
+          <h3>Procurement Manager</h3>
+          <div class="exp-co">V Cosmetic Crafters Pvt Ltd</div>
+          <ul class="exp-bullets">
+            <li>Managed 5-member procurement team — raw materials and packaging</li>
+            <li>Delivered <strong>₹15 Lakhs</strong> in cumulative savings via volume-based pricing</li>
+            <li><strong>50% logistics cost reduction</strong> — ₹16/kg to ₹8/kg, sustained 4 years</li>
+            <li>Expanded vendor base by <strong>30%</strong>, ensuring supply continuity</li>
+            <li>Reduced stockouts by <strong>25%</strong>, excess inventory by <strong>15%</strong></li>
+            <li>SAP & ZOHO — improved procurement cycle time by <strong>20%</strong></li>
           </ul>
         </div>
       </div>
 
-      <div class="tl-item gsap-reveal">
-        <div class="tl-marker"><div class="tl-dot"></div></div>
-        <div class="tl-card">
-          <div class="tl-header">
-            <div>
-              <h3>Procurement Manager</h3>
-              <p class="tl-company">V Cosmetic Crafters Pvt Ltd</p>
-            </div>
-            <span class="tl-date">Oct 2024 – Apr 2026</span>
-          </div>
-          <p class="tl-location">📍 Hyderabad, India</p>
-          <ul class="tl-list">
-            <li>Led end-to-end procurement for raw materials and packaging — managing a <strong>5-member team</strong></li>
-            <li>Negotiated contracts delivering <strong>₹15 Lakhs</strong> in cumulative savings via volume-based pricing</li>
-            <li>Achieved <strong>50% logistics cost reduction</strong> — freight from ₹16/kg to ₹8/kg, sustained 4 years</li>
-            <li>Expanded approved vendor base by <strong>30%</strong>, ensuring supply continuity &amp; quality compliance</li>
-            <li>Implemented supplier scorecards tracking quality, on-time delivery &amp; pricing competitiveness</li>
-            <li>Reduced stockouts by <strong>25%</strong> and excess inventory by <strong>15%</strong></li>
-            <li>Utilised <strong>SAP &amp; ZOHO</strong> — improving procurement cycle time by 20%</li>
-            <li>Maintained <strong>100% documentation accuracy</strong> across PO approvals &amp; audit support</li>
-          </ul>
+      <div class="exp-item reveal">
+        <div class="exp-left">
+          <div class="exp-dot"></div>
+          <div class="exp-date">Dec 2020 — Sept 2024</div>
         </div>
-      </div>
-
-      <div class="tl-item gsap-reveal">
-        <div class="tl-marker"><div class="tl-dot"></div></div>
-        <div class="tl-card">
-          <div class="tl-header">
-            <div>
-              <h3>Assistant Manager – Procurement</h3>
-              <p class="tl-company">Esthetic Insights Pvt Ltd</p>
-            </div>
-            <span class="tl-date">Dec 2020 – Sept 2024 · 3.8 Yrs</span>
-          </div>
-          <p class="tl-location">📍 Hyderabad, India</p>
-          <ul class="tl-list">
-            <li>Managed procurement lifecycle — RFQ/RFP, quotation comparison, PO preparation</li>
-            <li>Coordinated <strong>import procurement from China</strong> — customs clearance, freight forwarding, delivery tracking</li>
-            <li>Identified freight partners achieving <strong>50% per-kg cost reduction</strong> — sustained annual savings</li>
-            <li>Negotiated with <strong>15+ vendors</strong> — ₹15 Lakhs combined savings over tenure</li>
-            <li>Prepared MIS reports on spend, savings &amp; supplier performance for senior management</li>
-            <li><strong>Zero audit non-compliance</strong> findings across all procurement audits</li>
-            <li>🏆 <strong>Best Employee of the Year – 2022</strong></li>
+        <div class="exp-right">
+          <h3>Assistant Manager — Procurement</h3>
+          <div class="exp-co">Esthetic Insights Pvt Ltd</div>
+          <ul class="exp-bullets">
+            <li>End-to-end procurement lifecycle — RFQ/RFP, quotation comparison, PO preparation</li>
+            <li><strong>China import coordination</strong> — customs clearance, freight forwarding</li>
+            <li>Negotiated with <strong>15+ vendors</strong> — ₹15L combined savings</li>
+            <li>MIS reports on spend, savings & supplier performance</li>
+            <li><strong>Zero audit non-compliance</strong> findings</li>
+            <li>🏆 <strong>Best Employee of the Year — 2022</strong></li>
           </ul>
         </div>
       </div>
@@ -251,63 +257,55 @@
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="section-eyebrow">Competencies</span>
-      <h2 class="section-title">Core <em>Skills</em></h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card gsap-reveal">
-        <div class="skill-icon">🎯</div>
-        <h4>Strategic Sourcing</h4>
-        <div class="skill-pills">
-          <span>Vendor Identification</span><span>RFQ / RFP</span>
-          <span>Supplier Evaluation</span><span>Contract Management</span>
-          <span>Market Benchmarking</span>
+<!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+<section id="skills" class="s-skills">
+  <div class="sw">
+    <div class="s-tag">// 04 Skills</div>
+    <h2 class="s-title">Built on<br/><em>deep expertise.</em></h2>
+    <div class="skills-cols">
+      <div class="sk-col reveal">
+        <div class="sk-label">Sourcing</div>
+        <div class="sk-words">
+          <span>Strategic Sourcing</span><span>Vendor Identification</span>
+          <span>RFQ / RFP Management</span><span>Supplier Evaluation</span>
+          <span>Contract Management</span><span>Market Benchmarking</span>
         </div>
       </div>
-      <div class="skill-card gsap-reveal">
-        <div class="skill-icon">💬</div>
-        <h4>Negotiation &amp; Cost Control</h4>
-        <div class="skill-pills">
-          <span>Cost Negotiation</span><span>Volume Pricing</span>
-          <span>Payment Terms</span><span>Spend Analysis</span>
+      <div class="sk-col reveal">
+        <div class="sk-label">Negotiation</div>
+        <div class="sk-words">
+          <span>Cost Negotiation</span><span>Volume-Based Pricing</span>
+          <span>Payment Term Optimisation</span><span>Spend Analysis</span>
           <span>Cost-Benefit Analysis</span>
         </div>
       </div>
-      <div class="skill-card gsap-reveal">
-        <div class="skill-icon">🚢</div>
-        <h4>Import &amp; Logistics</h4>
-        <div class="skill-pills">
+      <div class="sk-col reveal">
+        <div class="sk-label">Import & Logistics</div>
+        <div class="sk-words">
           <span>China Import Procurement</span><span>Freight Management</span>
           <span>Customs Documentation</span><span>Logistics Optimisation</span>
           <span>Freight Partner Evaluation</span>
         </div>
       </div>
-      <div class="skill-card gsap-reveal">
-        <div class="skill-icon">📊</div>
-        <h4>Supply Chain Management</h4>
-        <div class="skill-pills">
+      <div class="sk-col reveal">
+        <div class="sk-label">Supply Chain</div>
+        <div class="sk-words">
           <span>Inventory Planning</span><span>Demand Forecasting</span>
           <span>Supplier Scorecard</span><span>KPI Tracking</span>
           <span>Supply Chain Resilience</span>
         </div>
       </div>
-      <div class="skill-card gsap-reveal">
-        <div class="skill-icon">🛠️</div>
-        <h4>Tools &amp; ERP</h4>
-        <div class="skill-pills">
+      <div class="sk-col reveal">
+        <div class="sk-label">Tools & ERP</div>
+        <div class="sk-words">
           <span>SAP</span><span>ZOHO Procurement</span>
           <span>MS Excel Advanced</span><span>Vendor Mgmt Systems</span>
           <span>PO Lifecycle Management</span>
         </div>
       </div>
-      <div class="skill-card gsap-reveal">
-        <div class="skill-icon">🤝</div>
-        <h4>Compliance &amp; Collaboration</h4>
-        <div class="skill-pills">
+      <div class="sk-col reveal">
+        <div class="sk-label">Compliance</div>
+        <div class="sk-words">
           <span>Audit Management</span><span>GRN Reconciliation</span>
           <span>Cross-functional Teams</span><span>MIS Reporting</span>
           <span>Procurement Documentation</span>
@@ -317,118 +315,119 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="section-eyebrow">Personal Initiative</span>
-      <h2 class="section-title">Built From <em>Scratch</em></h2>
-      <p class="section-sub">Beyond procurement — proof that I take initiative, own problems end-to-end, and ship real solutions.</p>
-    </div>
-    <div class="project-card-big gsap-reveal">
-      <div class="pcb-left">
-        <span class="pcb-tag">Personal Project · Full SDLC</span>
-        <div class="pcb-icon">📄</div>
-        <h3>GKZipPDF</h3>
-        <p>A production-deployed web app that solves a real operational pain — extracting PDFs from ZIP files generated by platforms like Nykaa and Myntra. Ideated, documented, tested, and deployed entirely solo.</p>
-        <div class="pcb-chips">
-          <span>Requirements Gathering</span><span>MoSCoW Prioritisation</span>
-          <span>UAT Testing</span><span>Vercel Deployment</span><span>Stakeholder Management</span>
+<!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+<section id="projects" class="s-proj">
+  <div class="sw">
+    <div class="s-tag">// 05 Selected Work</div>
+    <h2 class="s-title">Work that<br/><em>speaks for itself.</em></h2>
+    <div class="proj-list">
+
+      <div class="proj-item reveal" data-hover="VIEW">
+        <div class="pi-top">
+          <span class="pi-num">// PROJECT 01</span>
+          <span class="pi-cat">Cost Optimisation · Procurement</span>
         </div>
-        <div class="pcb-actions">
-          <button class="btn-primary magnetic" onclick="openZipModal()">View SDLC Journey</button>
-          <a href="https://www.gkzipdf.com" target="_blank" class="btn-secondary magnetic">Live Product ↗</a>
+        <div class="pi-mid">
+          <h3>V Cosmetic Crafters</h3>
+          <div class="pi-arrow">↗</div>
+        </div>
+        <p class="pi-desc">Led full procurement operations delivering ₹15 Lakhs in cumulative savings through strategic vendor negotiation, 50% logistics cost reduction, and RBAC-aligned supplier scorecard implementation.</p>
+        <div class="pi-tags">
+          <span>SAP</span><span>ZOHO</span><span>Supplier Scorecard</span><span>PO Lifecycle</span>
         </div>
       </div>
-      <div class="pcb-right">
-        <div class="sdlc-flow">
-          <div class="sf-step active"><div class="sf-num">01</div><div class="sf-label">Problem</div></div>
-          <div class="sf-arrow"></div>
-          <div class="sf-step"><div class="sf-num">02</div><div class="sf-label">Requirements</div></div>
-          <div class="sf-arrow"></div>
-          <div class="sf-step"><div class="sf-num">03</div><div class="sf-label">Design</div></div>
-          <div class="sf-arrow"></div>
-          <div class="sf-step"><div class="sf-num">04</div><div class="sf-label">Build</div></div>
-          <div class="sf-arrow"></div>
-          <div class="sf-step"><div class="sf-num">05</div><div class="sf-label">Test</div></div>
-          <div class="sf-arrow"></div>
-          <div class="sf-step live"><div class="sf-num">06</div><div class="sf-label">🟢 Live</div></div>
+
+      <div class="proj-item reveal" data-hover="VIEW">
+        <div class="pi-top">
+          <span class="pi-num">// PROJECT 02</span>
+          <span class="pi-cat">Supply Chain · ERP · Compliance</span>
         </div>
-        <div class="pcb-quote">"I had an itch — at least one website should be built on my name. So I built it, deployed it, and made it live."</div>
+        <div class="pi-mid">
+          <h3>Esthetic Insights — ERP & Import</h3>
+          <div class="pi-arrow">↗</div>
+        </div>
+        <p class="pi-desc">Managed import procurement from China coordinating freight, customs documentation, and vendor negotiations with 15+ suppliers. Zero audit non-compliances over 3.8 years.</p>
+        <div class="pi-tags">
+          <span>Import Procurement</span><span>Customs</span><span>Freight Mgmt</span><span>MIS Reports</span>
+        </div>
       </div>
+
+      <div class="proj-item reveal" data-hover="EXPLORE">
+        <div class="pi-top">
+          <span class="pi-num">// PERSONAL PROJECT</span>
+          <span class="pi-cat">SDLC · Deployment · Initiative</span>
+        </div>
+        <div class="pi-mid">
+          <h3>GKZipPDF — Live Product</h3>
+          <div class="pi-arrow">↗</div>
+        </div>
+        <p class="pi-desc">A production-deployed web app solving a real operational problem — extracting PDFs from ZIP files. Owned every phase of SDLC solo: requirements, MoSCoW prioritisation, UAT, and Vercel deployment.</p>
+        <div class="pi-tags">
+          <span>SDLC</span><span>MoSCoW</span><span>UAT</span><span>Live at gkzipdf.com ↗</span>
+        </div>
+        <a href="https://www.gkzipdf.com" target="_blank" class="pi-link" onclick="event.stopPropagation()">Visit Live →</a>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner about-inner">
-    <div class="about-text gsap-reveal">
-      <span class="section-eyebrow">The Person</span>
-      <h2 class="section-title">About <em>Me</em></h2>
-      <p>I'm a <strong>Results-driven Procurement &amp; Supply Chain professional</strong> with 5+ years of progressive experience in strategic sourcing, vendor management, cost negotiation, and logistics optimisation — primarily within the Cosmetics &amp; Beauty domain.</p>
-      <p>I've consistently delivered measurable outcomes: <strong>₹15 Lakhs in cumulative savings</strong>, a <strong>50% reduction in logistics costs</strong> sustained over 4 years, and <strong>100% audit compliance</strong> with zero non-conformance findings.</p>
-      <p>Currently at <strong>BTM Ventures Pvt Ltd</strong>, I lead procurement for the premium <strong>Dóveriye</strong> brand — bringing the same rigour, discipline, and supplier relationship expertise that defined my entire career.</p>
-      <p>Great procurement isn't just about buying cheaper — it's about building supply chains that never break.</p>
-    </div>
-    <div class="about-cards gsap-reveal">
-      <div class="about-card"><span class="ac-label">Domain</span><span class="ac-val">Cosmetics · Beauty · Supply Chain</span></div>
-      <div class="about-card"><span class="ac-label">Specialisation</span><span class="ac-val">Strategic Sourcing · Import Procurement</span></div>
-      <div class="about-card"><span class="ac-label">Tools</span><span class="ac-val">SAP · ZOHO · MS Excel Advanced</span></div>
-      <div class="about-card"><span class="ac-label">Education</span><span class="ac-val">BBA · North East Christian University · 2018</span></div>
-      <div class="about-card highlight"><span class="ac-label">Status</span><span class="ac-val">🟢 Open to Senior Procurement Opportunities</span></div>
-    </div>
+<!-- ═══════════════════════════ FINAL CTA ═══════════════════════════ -->
+<section class="s-cta">
+  <div class="sw cta-inner">
+    <h2 class="cta-title reveal">Your next<br/><em>procurement leader</em><br/>could be this.</h2>
+    <a href="#contact" class="cta-btn reveal">Let's Make It Happen →</a>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-inner">
-    <span class="section-eyebrow" style="color:rgba(255,255,255,0.4);">Get In Touch</span>
-    <h2 class="contact-title">Let's <em>Talk</em></h2>
-    <p class="contact-sub">Open to senior procurement roles, supply chain leadership, or strategic sourcing opportunities.</p>
-    <div class="contact-cards">
-      <a href="https://www.linkedin.com/in/karthikgokaraju" target="_blank" class="contact-card magnetic gsap-reveal">
-        <div class="cc-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
-        <span class="cc-label">LinkedIn</span>
-        <span class="cc-val">karthikgokaraju</span>
+<!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+<section id="contact" class="s-contact">
+  <div class="sw">
+    <div class="s-tag">// 06 Contact</div>
+    <h2 class="s-title">Have an opportunity?<br/><em>Let's talk.</em></h2>
+    <p class="contact-sub">Whether you're looking for a Senior Procurement Manager, Supply Chain lead, or strategic sourcing expertise — let's create supply chains that never break.</p>
+    <div class="contact-row">
+      <a href="https://www.linkedin.com/in/karthikgokaraju" target="_blank" class="c-link reveal">
+        <span class="cl-label">LinkedIn</span>
+        <span class="cl-val">karthikgokaraju ↗</span>
       </a>
-      <a href="https://wa.me/917730049089" target="_blank" class="contact-card magnetic gsap-reveal">
-        <div class="cc-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
-        <span class="cc-label">WhatsApp / Call</span>
-        <span class="cc-val">+91 7730049089</span>
+      <a href="https://wa.me/917730049089" target="_blank" class="c-link reveal">
+        <span class="cl-label">WhatsApp / Call</span>
+        <span class="cl-val">+91 7730049089 ↗</span>
       </a>
-      <a href="mailto:Karthik.g@doveriye.com" class="contact-card magnetic gsap-reveal">
-        <div class="cc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-        <span class="cc-label">Email</span>
-        <span class="cc-val">Karthik.g@doveriye.com</span>
+      <a href="mailto:Karthik.g@doveriye.com" class="c-link reveal">
+        <span class="cl-label">Email</span>
+        <span class="cl-val">Karthik.g@doveriye.com ↗</span>
       </a>
     </div>
   </div>
 </section>
 
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
 <footer>
-  <p>© 2026 Gokaraju Karthik · Procurement Manager · Built with intent.</p>
+  <div class="ft-inner">
+    <span class="ft-logo">GK<span class="dot">.</span></span>
+    <span class="ft-mid">Built with intent, not templates.</span>
+    <span class="ft-right">© 2026 Gokaraju Karthik</span>
+  </div>
 </footer>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="zipModal" onclick="closeZipModal(event)">
+<!-- SDLC MODAL -->
+<div class="modal-overlay" id="sdlcModal" onclick="closeModal(event)">
   <div class="modal-box">
-    <button class="modal-close" onclick="closeZipModal()">✕</button>
-    <div class="modal-header">
-      <span class="modal-tag">Personal Project · Full SDLC</span>
-      <h2>GKZipPDF <span style="color:var(--accent);">— SDLC Journey</span></h2>
-      <p>A live production app. Every phase owned solo. Proof that initiative lives beyond the job description.</p>
-      <a href="https://www.gkzipdf.com" target="_blank" class="btn-primary" style="display:inline-block;margin-top:0.75rem;">Visit Live Product ↗</a>
-    </div>
-    <div class="sdlc-phases">
-      <div class="phase"><div class="phase-num">01</div><div class="phase-body"><h4>Problem Statement</h4><p>Real operational friction — extracting PDFs from ZIP files from e-commerce platforms like Nykaa &amp; Myntra. No clean tool existed.</p></div></div>
-      <div class="phase"><div class="phase-num">02</div><div class="phase-body"><h4>Requirements Gathering</h4><p>Interview &amp; Workshop techniques. <strong>MoSCoW prioritisation</strong>: ZIP→PDF &amp; Compress (Must), Merge PDF (Should), PDF↔Word (Could), Image to PDF (Phase 2).</p></div></div>
-      <div class="phase"><div class="phase-num">03</div><div class="phase-body"><h4>Design</h4><p>Simple functional layout. Python Flask tech stack. Prioritised usability over aesthetics.</p></div></div>
-      <div class="phase"><div class="phase-num">04</div><div class="phase-body"><h4>Development</h4><p>Vibe-coded using LLMs — the spec I wrote became the blueprint for every component.</p></div></div>
-      <div class="phase"><div class="phase-num">05</div><div class="phase-body"><h4>Testing</h4><p>Unit testing · System testing with 100 ZIP files simultaneously · UAT with real users.</p></div></div>
-      <div class="phase"><div class="phase-num">06</div><div class="phase-body"><h4>Deployment</h4><p>GitHub → Vercel → Namecheap domain → DNS configuration. Live at gkzipdf.com.</p></div></div>
-      <div class="phase"><div class="phase-num">07</div><div class="phase-body"><h4>Stakeholder Management</h4><p>Mid-project Image-to-PDF request. Assessed impact, proposed phased approach — core now, feature in Phase 2.</p></div></div>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <span class="modal-tag">Personal Project · Full SDLC</span>
+    <h2>GKZipPDF — SDLC Journey</h2>
+    <p class="modal-intro">A live production app. Every phase owned solo.</p>
+    <a href="https://www.gkzipdf.com" target="_blank" class="btn-white" style="display:inline-block;margin-bottom:1.5rem;">Visit Live Product ↗</a>
+    <div class="sdlc-steps">
+      <div class="ss"><span class="ss-n">01</span><div><strong>Problem Statement</strong><p>Operational friction — extracting PDFs from ZIP files from Nykaa, Myntra. No clean tool existed.</p></div></div>
+      <div class="ss"><span class="ss-n">02</span><div><strong>Requirements & MoSCoW</strong><p>Must: ZIP→PDF & Compress. Should: Merge PDF. Could: PDF↔Word. Won't: Image→PDF (Phase 2).</p></div></div>
+      <div class="ss"><span class="ss-n">03</span><div><strong>Design</strong><p>Simple functional layout. Python Flask tech stack. Usability first.</p></div></div>
+      <div class="ss"><span class="ss-n">04</span><div><strong>Development</strong><p>Vibe-coded using LLMs — the spec I wrote became the blueprint.</p></div></div>
+      <div class="ss"><span class="ss-n">05</span><div><strong>Testing</strong><p>Unit → System (100 ZIPs simultaneously) → UAT with real users.</p></div></div>
+      <div class="ss"><span class="ss-n">06</span><div><strong>Deployment</strong><p>GitHub → Vercel → Namecheap DNS → gkzipdf.com. Live.</p></div></div>
+      <div class="ss"><span class="ss-n">07</span><div><strong>Stakeholder Management</strong><p>Image-to-PDF request mid-project. Proposed phased approach — Phase 2.</p></div></div>
     </div>
   </div>
 </div>

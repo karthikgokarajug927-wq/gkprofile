@@ -180,6 +180,15 @@ section{padding:8rem 0;}
 .pi-link{display:inline-block;margin-top:1rem;font-size:0.8rem;font-weight:600;color:var(--accent);border-bottom:1px solid rgba(91,155,213,0.3);padding-bottom:1px;transition:var(--t);}
 .pi-link:hover{border-color:var(--accent);}
 
+/* EXPIRION special card */
+.expirion-card{border-left:2px solid var(--accent);padding-left:1.5rem;}
+.expirion-quote{font-family:'Cormorant',serif;font-size:1.15rem;font-style:italic;color:var(--accent2);margin-bottom:1.5rem;padding-left:1rem;border-left:2px solid rgba(91,155,213,0.3);}
+.expirion-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem;padding:1.25rem;background:rgba(91,155,213,0.04);border:1px solid rgba(91,155,213,0.12);border-radius:8px;}
+.em-block{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0.25rem;}
+.em-num{font-family:'Cormorant',serif;font-size:2rem;font-weight:700;color:#fff;line-height:1;}
+.em-label{font-size:0.65rem;color:var(--muted);letter-spacing:0.06em;line-height:1.3;}
+@media(max-width:600px){.expirion-meta{grid-template-columns:1fr 1fr;}.expirion-card{padding-left:0.75rem;}}
+
 /* ── FINAL CTA ── */
 .s-cta{background:var(--bg2);padding:10rem 0;text-align:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .cta-inner{display:flex;flex-direction:column;align-items:center;gap:2.5rem;}

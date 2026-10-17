@@ -68,39 +68,50 @@
 <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
 <section id="hero">
   <div class="hero-pin" id="heroPin">
-    <!-- Background grid -->
-    <div class="h-grid"></div>
-    <!-- Photo -->
-    <div class="h-photo-wrap" id="hPhoto">
-      <img src="assets/karthik.jpeg" alt="Gokaraju Karthik" class="h-photo"/>
-      <div class="h-photo-overlay"></div>
-    </div>
-    <!-- Left text -->
-    <div class="h-left">
-      <div class="h-eyebrow">
-        <span class="h-line"></span>
-        <span>Procurement Manager</span>
+    <div class="h-bg-dots"></div>
+    <div class="h-accent-blob"></div>
+    <div class="hero-center">
+      <div class="hc-eyebrow">
+        <span class="hc-dot"></span>
+        <span>Procurement Manager · BTM Ventures · Hyderabad</span>
       </div>
       <h1 class="h-name">
         <span class="h-n1">Gokaraju</span>
         <span class="h-n2"><em>Karthik</em></span>
       </h1>
-    </div>
-    <!-- Right text -->
-    <div class="h-right">
       <p class="h-tagline">Procurement Manager who<br/><strong>builds the tools others wish existed.</strong></p>
-      <p class="h-sub">₹15L saved · 50% logistics cut<br/>Production systems built · 0 audit findings</p>
-    </div>
-    <!-- Bottom -->
-    <div class="h-bottom">
-      <a href="#about" class="h-cta">View My Impact</a>
-      <div class="h-scroll-hint" id="hScroll">
-        <div class="h-scroll-line"></div>
-        <span>SCROLL TO EXPLORE</span>
+      <div class="h-metrics">
+        <div class="hm-item">
+          <span class="hm-num">₹15L</span>
+          <span class="hm-label">Cost Savings</span>
+        </div>
+        <div class="hm-sep"></div>
+        <div class="hm-item">
+          <span class="hm-num">50%</span>
+          <span class="hm-label">Logistics Cut</span>
+        </div>
+        <div class="hm-sep"></div>
+        <div class="hm-item">
+          <span class="hm-num">2</span>
+          <span class="hm-label">Tools Built</span>
+        </div>
+        <div class="hm-sep"></div>
+        <div class="hm-item">
+          <span class="hm-num">0</span>
+          <span class="hm-label">Audit Findings</span>
+        </div>
+      </div>
+      <div class="h-actions">
+        <a href="#achievements" class="h-btn-primary">View My Impact</a>
+        <a href="#contact" class="h-btn-secondary">Let's Connect →</a>
       </div>
     </div>
-    <!-- Corner label -->
-    <div class="h-corner">BTM Ventures · Dóveriye · Hyderabad</div>
+    <div class="h-scroll-hint" id="hScroll">
+      <div class="h-scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+    <div class="h-corner-tl">GK<span>.</span></div>
+    <div class="h-corner-br">BTM Ventures · Dóveriye</div>
   </div>
 </section>
 
@@ -218,7 +229,10 @@
             <li>Automated Monday morning email alerts dispatched to <strong>6 cross-functional stakeholders</strong> — staged by urgency: Expired · Under 1 Month · 1–3 Months · 3–6 Months · Safe</li>
             <li>Role-based access control implemented: <strong>Admin</strong> (full access) · <strong>QA</strong> (expiry reviews & approvals) · <strong>Procurement</strong> (stock & reorder tracking) — ensuring right visibility to right teams</li>
             <li>Daily scheduler running at <strong>09:00 IST</strong> — live sync with Zoho Inventory, zero manual intervention required post-deployment</li>
-            <li>More automations in progress — building an internal procurement ops layer at BTM Ventures</li>
+            <li>Designed and built a <strong>Material Projection & Shortage Ledger</strong> — a web-based MRP tool that reads Zoho Inventory stock and composite item (BOM) exports, breaks each finished good into raw + packaging materials, and consolidates shared materials across multiple products into a single exact "Qty to Order" per material</li>
+            <li>MRP engine nets off: stock on hand · ongoing production batches · stock reserved by other plans · purchase orders in transit — outputting a shortage report with PDF export and full projection history log per team member</li>
+            <li>Used daily by <strong>3+ manufacturing team members</strong> (Production, QA, Procurement) — replaced manual cross-referencing of BOM sheets and stock files</li>
+            <li>More automations in progress — building an internal procurement & manufacturing ops layer at BTM Ventures</li>
           </ul>
         </div>
       </div>
@@ -397,6 +411,43 @@
         </div>
       </div>
 
+      <div class="proj-item reveal expirion-card" data-hover="EXPLORE">
+        <div class="pi-top">
+          <span class="pi-num">// BUILT AT BTM VENTURES · PRODUCTION · AUTOMATION 02</span>
+          <span class="pi-cat">MRP · BOM Engine · Manufacturing Operations</span>
+        </div>
+        <div class="pi-mid">
+          <h3>Material Projection & Shortage Ledger</h3>
+          <div class="pi-arrow">↗</div>
+        </div>
+        <div class="expirion-quote">"What SAP charges lakhs to implement — I built it from scratch, solo."</div>
+        <div class="expirion-meta">
+          <div class="em-block">
+            <span class="em-num">24+</span>
+            <span class="em-label">Materials Per Plan</span>
+          </div>
+          <div class="em-block">
+            <span class="em-num">3+</span>
+            <span class="em-label">Team Members Using Daily</span>
+          </div>
+          <div class="em-block">
+            <span class="em-num">100%</span>
+            <span class="em-label">Manual BOM Cross-Ref Eliminated</span>
+          </div>
+          <div class="em-block">
+            <span class="em-num">1</span>
+            <span class="em-label">Click to Exact Order Qty</span>
+          </div>
+        </div>
+        <p class="pi-desc">Before this tool — the manufacturing team manually cross-referenced BOM sheets, stock files, ongoing batch records, and transit POs across multiple spreadsheets to figure out what to order. I built a web-based MRP engine that does it in one click. It reads Zoho Inventory stock and composite item (BOM) exports, breaks each finished good into its raw materials and packaging materials, consolidates shared materials across multiple products, then nets off stock on hand, batches in production, stock reserved by other plans, and POs in transit — outputting one clean "Qty to Order" per material. PDF export. History log per team member. Shortage flag per line. Used daily by Production, QA and Procurement.</p>
+        <div class="pi-tags">
+          <span>BOM Engine</span><span>Zoho Inventory API</span>
+          <span>Material Requirements Planning</span><span>Shortage Detection</span>
+          <span>PDF Export</span><span>Multi-User</span>
+          <span>Production Deployed</span>
+        </div>
+      </div>
+
       <div class="proj-item reveal" data-hover="EXPLORE">
         <div class="pi-top">
           <span class="pi-num">// PERSONAL PROJECT</span>
@@ -420,8 +471,8 @@
 <!-- ═══════════════════════════ FINAL CTA ═══════════════════════════ -->
 <section class="s-cta">
   <div class="sw cta-inner">
-    <h2 class="cta-title reveal">Your next<br/><em>procurement leader</em><br/>could be this.</h2>
-    <a href="#contact" class="cta-btn reveal">Let's Make It Happen →</a>
+    <h2 class="cta-title reveal">A procurement leader<br/>who <em>builds the systems</em><br/>others depend on.</h2>
+    <a href="#contact" class="cta-btn reveal">Let's Talk →</a>
   </div>
 </section>
 

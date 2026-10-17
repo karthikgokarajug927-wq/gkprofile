@@ -106,56 +106,50 @@ function initNav() {
 function initHero() {
   const tl = gsap.timeline({ delay: 0.1 });
 
-  tl.fromTo('.h-photo',
-    { scale: 1.08, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 1.4, ease: 'power3.out' }
-  )
-  .fromTo('.h-eyebrow',
-    { x: -30, opacity: 0 },
-    { x: 0, opacity: 1, duration: 0.8, ease: 'power2.out' }, '-=0.8'
+  tl.fromTo('.hc-eyebrow',
+    { y: -16, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }
   )
   .fromTo('.h-n1',
-    { y: 60, opacity: 0, skewY: 4 },
-    { y: 0, opacity: 1, skewY: 0, duration: 1, ease: 'power3.out' }, '-=0.5'
+    { y: 70, opacity: 0, skewY: 3 },
+    { y: 0, opacity: 1, skewY: 0, duration: 1.1, ease: 'power3.out' }, '-=0.3'
   )
   .fromTo('.h-n2',
-    { y: 60, opacity: 0, skewY: 4 },
-    { y: 0, opacity: 1, skewY: 0, duration: 1, ease: 'power3.out' }, '-=0.7'
+    { y: 70, opacity: 0, skewY: 3 },
+    { y: 0, opacity: 1, skewY: 0, duration: 1.1, ease: 'power3.out' }, '-=0.8'
   )
-  .fromTo('.h-right',
-    { x: 30, opacity: 0 },
-    { x: 0, opacity: 1, duration: 0.9, ease: 'power2.out' }, '-=0.7'
-  )
-  .fromTo('.h-bottom',
+  .fromTo('.h-tagline',
     { y: 20, opacity: 0 },
     { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' }, '-=0.5'
   )
-  .fromTo('.h-corner',
+  .fromTo('.h-metrics',
+    { y: 20, opacity: 0, scale: 0.97 },
+    { y: 0, opacity: 1, scale: 1, duration: 0.9, ease: 'power2.out' }, '-=0.4'
+  )
+  .fromTo('.h-actions',
+    { y: 16, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, '-=0.5'
+  )
+  .fromTo(['.h-corner-tl', '.h-corner-br'],
     { opacity: 0 },
-    { opacity: 1, duration: 1 }, '-=0.5'
+    { opacity: 1, duration: 0.8, stagger: 0.1 }, '-=0.4'
   );
 
-  // Subtle parallax on photo as you scroll
-  gsap.to('.h-photo', {
-    yPercent: 12,
+  // Parallax on blob
+  gsap.to('.h-accent-blob', {
+    yPercent: 20,
     ease: 'none',
     scrollTrigger: {
-      trigger: '#hero',
-      start: 'top top',
-      end: 'bottom top',
-      scrub: true
+      trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true
     }
   });
 
-  // Photo fade as you leave hero
-  gsap.to('.h-photo-wrap', {
-    opacity: 0,
+  // Dots parallax
+  gsap.to('.h-bg-dots', {
+    yPercent: 10,
     ease: 'none',
     scrollTrigger: {
-      trigger: '#hero',
-      start: '60% top',
-      end: 'bottom top',
-      scrub: true
+      trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true
     }
   });
 }
@@ -385,12 +379,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ════════════════════════════════════════════
-   SUBTLE HERO TEXT PARALLAX ON SCROLL
+   HERO SUBTLE SCALE ON SCROLL
 ════════════════════════════════════════════ */
 window.addEventListener('scroll', () => {
   const y = window.scrollY;
-  const el = document.querySelector('.h-left');
-  const er = document.querySelector('.h-right');
-  if (el) el.style.transform = `translateY(${y * 0.1}px)`;
-  if (er) er.style.transform = `translateY(${y * 0.08}px)`;
+  const hc = document.querySelector('.hero-center');
+  if (hc) hc.style.transform = `translateY(${y * 0.08}px)`;
 }, { passive: true });

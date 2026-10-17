@@ -104,53 +104,70 @@ function initNav() {
    HERO ANIMATIONS
 ════════════════════════════════════════════ */
 function initHero() {
-  const tl = gsap.timeline({ delay: 0.1 });
+  const tl = gsap.timeline({ delay: 0.15 });
 
-  tl.fromTo('.hc-eyebrow',
-    { y: -16, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }
+  // Left side
+  tl.fromTo('.hl-eyebrow',
+    { x: -20, opacity: 0 },
+    { x: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }
   )
   .fromTo('.h-n1',
-    { y: 70, opacity: 0, skewY: 3 },
-    { y: 0, opacity: 1, skewY: 0, duration: 1.1, ease: 'power3.out' }, '-=0.3'
+    { y: 80, opacity: 0, skewY: 3 },
+    { y: 0, opacity: 1, skewY: 0, duration: 1.1, ease: 'power3.out' }, '-=0.4'
   )
   .fromTo('.h-n2',
-    { y: 70, opacity: 0, skewY: 3 },
-    { y: 0, opacity: 1, skewY: 0, duration: 1.1, ease: 'power3.out' }, '-=0.8'
+    { y: 80, opacity: 0, skewY: 3 },
+    { y: 0, opacity: 1, skewY: 0, duration: 1.1, ease: 'power3.out' }, '-=0.85'
   )
   .fromTo('.h-tagline',
     { y: 20, opacity: 0 },
     { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' }, '-=0.5'
   )
-  .fromTo('.h-metrics',
-    { y: 20, opacity: 0, scale: 0.97 },
-    { y: 0, opacity: 1, scale: 1, duration: 0.9, ease: 'power2.out' }, '-=0.4'
-  )
   .fromTo('.h-actions',
     { y: 16, opacity: 0 },
     { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, '-=0.5'
   )
-  .fromTo(['.h-corner-tl', '.h-corner-br'],
-    { opacity: 0 },
-    { opacity: 1, duration: 0.8, stagger: 0.1 }, '-=0.4'
+  // Right side
+  .fromTo('.hero-stats',
+    { x: 30, opacity: 0, scale: 0.97 },
+    { x: 0, opacity: 1, scale: 1, duration: 0.9, ease: 'power2.out' }, '-=0.9'
+  )
+  .fromTo('.hero-company',
+    { x: 30, opacity: 0 },
+    { x: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, '-=0.6'
   );
 
-  // Parallax on blob
-  gsap.to('.h-accent-blob', {
-    yPercent: 20,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true
+  // Counter animation on stats
+  document.querySelectorAll('.hs-num').forEach(el => {
+    const raw = el.textContent.trim();
+    const num = parseFloat(raw.replace(/[^0-9.]/g, ''));
+    const pre = raw.match(/^[^0-9]*/)?.[0] || '';
+    const suf = raw.match(/[^0-9]*$/)?.[0] || '';
+    if (!isNaN(num) && num > 1) {
+      const obj = { val: 0 };
+      gsap.to(obj, {
+        val: num, duration: 1.8, ease: 'power2.out', delay: 0.8,
+        onUpdate: () => { el.textContent = pre + Math.round(obj.val) + suf; }
+      });
     }
   });
 
-  // Dots parallax
-  gsap.to('.h-bg-dots', {
-    yPercent: 10,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true
-    }
+  // Subtle parallax
+  gsap.to('.hero-bg-blob', {
+    yPercent: 25, ease: 'none',
+    scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true }
+  });
+  gsap.to('.hero-bg-dots', {
+    yPercent: 10, ease: 'none',
+    scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true }
+  });
+  gsap.to('.hero-left', {
+    yPercent: 6, ease: 'none',
+    scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true }
+  });
+  gsap.to('.hero-right', {
+    yPercent: 4, ease: 'none',
+    scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true }
   });
 }
 
@@ -202,7 +219,7 @@ function initScrollReveals() {
     }
   );
 
-  // Counter animation on stats
+  // Counter animation on about stats
   document.querySelectorAll('.as-num').forEach(el => {
     const text = el.textContent.trim();
     const num  = parseFloat(text.replace(/[^0-9.]/g, ''));
@@ -211,7 +228,7 @@ function initScrollReveals() {
     if (!isNaN(num) && num > 0) {
       const obj = { val: 0 };
       gsap.to(obj, {
-        val: num, duration: 2, ease: 'power2.out',
+        val: num, duration: 1.8, ease: 'power2.out',
         scrollTrigger: { trigger: el, start: 'top 85%' },
         onUpdate: () => { el.textContent = pre + Math.round(obj.val) + suf; }
       });
@@ -379,10 +396,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ════════════════════════════════════════════
-   HERO SUBTLE SCALE ON SCROLL
+   NAV SCROLL CLASS (additional)
 ════════════════════════════════════════════ */
 window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  const hc = document.querySelector('.hero-center');
-  if (hc) hc.style.transform = `translateY(${y * 0.08}px)`;
+  const nav = document.getElementById('nav');
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
